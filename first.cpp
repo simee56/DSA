@@ -1,5 +1,7 @@
 #include<iostream>
+using namespace std;
 
 int main(){
-    std::cout<<"HII";
+    cout<<"HII"<<endl<<"This si simee\n";
+    cout<<"Yayyyyyy";
 }
