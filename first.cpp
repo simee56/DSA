@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    cout<<"HII"<<endl<<"This si simee\n";
+    cout<<"HII"<<endl<<"This is simee\n";
     cout<<"Yayyyyyy\n";
 
     //variable declaration and definition
@@ -20,5 +20,14 @@ int main(){
 
     bool b = true;
     cout<<b<<endl;
+
+    //taking inputs
+    int p,q;
+    cout<<"Enter the value of p : ";
+    cin>>p;
+    cout<<"Enter the value of q : ";
+    cin>>q;
+    cout<<"The sum is: "<< p+q;
+
 
 };
