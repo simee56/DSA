@@ -31,3 +31,19 @@ int main () {
     else
     cout<<"second number "<<num2<<" is greater.";
 }
+
+//even or odd
+#include<iostream>
+using namespace std;
+
+int main () {
+     int n;
+    cout<<"Enter number = ";
+    cin>>n;
+
+    if(n%2 == 0)
+    cout<<"Given number " <<n<<" is Even.";
+    else
+    cout<<"Given number " <<n<<" is Odd.";
+}
+   
