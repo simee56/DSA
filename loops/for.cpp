@@ -24,3 +24,14 @@ int main()
         cout<<"The square of "<<i<<" is "<<i*i<<endl;
     }
 }
+
+
+//print a to z
+#include<iostream>
+using namespace std;
+
+int main() {
+    for( char character = 'a'; character <= 'z'; character = character+1) {
+        cout<<character<< " ";
+    }
+}
