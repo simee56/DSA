@@ -62,7 +62,7 @@ int main()
 
     cout<<"Enter the value of = ";
     cin>>n;
-    
+
     cout<<"Enter the power = ";
     cin>>pow;
 
@@ -72,4 +72,20 @@ int main()
         num = num * n;
     };
     cout<<num;
+}
+
+//print sum of n natural numbers
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n, sum = 0;
+    cout<<"Enter the value of n = ";
+    cin>>n;
+
+    for(int i=0; i<=n; i++){
+        sum = sum + i;
+    }
+    cout<<sum;
 }
