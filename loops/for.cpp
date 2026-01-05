@@ -51,3 +51,25 @@ int main()
         cout<<i <<"*" <<n<< " is "<<i*n<<endl;
     }
 }
+
+//calculate the power of a number
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n, num, pow;
+
+    cout<<"Enter the value of = ";
+    cin>>n;
+    
+    cout<<"Enter the power = ";
+    cin>>pow;
+
+    num = n;
+
+    for (int i = 1; i<pow; i++){
+        num = num * n;
+    };
+    cout<<num;
+}
