@@ -63,4 +63,33 @@ int main() {
     else
     cout<<"The number is positive.";
 }
+
+//Vowel or consonant
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    char character;
+    cout<<"Enter the character = ";
+    cin>>character;
+
+    if(character == 'a')
+    cout<<"Its a Vowel.";
+
+    else if( character == 'e')
+    cout<<"Its a Vowel.";
+
+    else if (character == 'i')
+    cout<<"Its a Vowel.";
+
+    else if( character == 'o')
+    cout<<"Its a Vowel.";
+
+    else if (character == 'u')
+    cout<<"Its a Vowel.";
+
+    else 
+    cout<<"Its a Consonant.";
+}
    
