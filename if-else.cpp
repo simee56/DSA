@@ -46,4 +46,21 @@ int main () {
     else
     cout<<"Given number " <<n<<" is Odd.";
 }
+
+//positive, negative or zero
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n ;
+    cout<<"Enter the number = ";
+    cin>>n;
+
+    if(n < 0) 
+    cout<<"Th numbert is negative.";
+    else if(n == 0)
+    cout<<"The number is zero.";
+    else
+    cout<<"The number is positive.";
+}
    
