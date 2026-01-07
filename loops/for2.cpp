@@ -46,3 +46,34 @@ int main() {
         cout<<"Given number is a prime number.";
     }
 }
+
+
+//Fibonacci series
+#include<iostream>
+using namespace std;
+
+int main() {
+    int current, n, last=0, previous=1;
+    
+    cout<<"Enter the value of n = ";
+    cin>>n;
+
+      if (n == 0) {
+        cout << 0;
+        return 0;
+    }
+
+    if (n == 1) {
+        cout << 1;
+        return 0;
+    }
+
+    for(int i=1; i<n; i++){
+        current = previous+last;
+        last = previous;
+        previous = current;
+
+        cout<<current<< ", ";
+
+    }
+}
