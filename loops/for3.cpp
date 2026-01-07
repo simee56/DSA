@@ -79,3 +79,24 @@ int main()
         cout<<endl;
     }
 }
+
+
+// print -  a b c d e
+//          a b c d e
+//          a b c d e
+//          a b c d e
+//          a b c d e
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    for(char row = 'a'; row <= 'e'; row++ )
+    {
+        for(int col = 1; col <= 5; col++)
+        {
+            cout<<row<<" ";
+        }
+        cout<<endl;
+    }
+}
