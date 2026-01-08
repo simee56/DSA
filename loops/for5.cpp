@@ -19,8 +19,7 @@ int main()
         for(int col=1; col<=2*row-1; col++)
         cout<<"* ";
 
-        for(int col=1; col<=n-row; col++)
-        cout<<"  ";
+        
 
         cout<<endl;
     }
