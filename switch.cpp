@@ -42,3 +42,22 @@ int main()
         cout<<"Enter valid number!";
     }
 }
+
+
+//break
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Enter the value of i = ";
+    cin>>n;
+
+    for(int i= 0; i<=n; i++)
+    {
+        if(i==4)
+        break;
+
+        cout<<i;
+    }
+}
