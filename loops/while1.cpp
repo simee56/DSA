@@ -36,3 +36,24 @@ int main()
     }
 
 }
+
+//even and odd
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i=0, n;
+    cout<<"enter the value of n = ";
+    cin>>n;
+
+    while(i<=n)
+    {
+        if(i%2 == 0)
+        cout<<i<<" ";
+
+        else
+        cout<<i<<" ";
+
+        i++;
+    }
+}
