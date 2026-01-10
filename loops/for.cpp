@@ -10,6 +10,7 @@ int main()
 }
 
 
+
 //printing square
 #include<iostream>
 using namespace std;
@@ -26,6 +27,7 @@ int main()
 }
 
 
+
 //print a to z
 #include<iostream>
 using namespace std;
@@ -35,6 +37,8 @@ int main() {
         cout<<character<< " ";
     }
 }
+
+
 
 //table
 #include<iostream>
@@ -51,6 +55,8 @@ int main()
         cout<<i <<"*" <<n<< " is "<<i*n<<endl;
     }
 }
+
+
 
 //calculate the power of a number
 #include<iostream>
@@ -74,6 +80,8 @@ int main()
     cout<<num;
 }
 
+
+
 //print sum of n natural numbers
 #include<iostream>
 using namespace std;
@@ -89,7 +97,7 @@ int main()
     }
     cout<<sum;
 }
-
+//OR
 #include<iostream>
 using namespace std;
 
@@ -101,3 +109,6 @@ int main()
     int sum = (n*(n+1))/2;
     cout<<sum;
 }
+
+
+
