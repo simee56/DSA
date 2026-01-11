@@ -54,7 +54,7 @@ int main()
 }
 
 
-//Binary to Decimal
+//Decimal to Octal
 #include<iostream>
 using namespace std;
 int main()
@@ -76,7 +76,7 @@ int main()
         ans = rem*mul+ans;
 
         //multiplication
-        mul = mul*8;
+        mul = mul*10;
     }
-    cout<<"The Decimal form of given number is = "<<ans;
+    cout<<"The Octal form of given number is = "<<ans;
 }
