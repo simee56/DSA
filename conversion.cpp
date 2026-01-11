@@ -54,7 +54,6 @@ int main()
 
 
 
-
 //Binary to Decimal
 #include<iostream>
 using namespace std;
@@ -108,4 +107,41 @@ int main()
         mul = mul*10;
     }
     cout<<"The Octal form of given number is = "<<ans;
+}
+
+
+//Binary to Octal
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout<<"Enter the number = ";
+    cin>>num;
+    int rem, decimal = 0, mul = 1;
+
+    //FIRSTLY CONVERT BINARY INTO DECIMAL   
+    while(num > 0)
+    {
+        rem = num%10;
+        num = num/10;
+        decimal = rem*mul+decimal;
+        mul = mul*2;
+    }
+        cout<<"The Decimal form of given number is = "<<decimal<<endl;
+
+    //Decimal to Octal
+    int num1 = decimal;
+    int octal = 0;
+    mul = 1;
+
+     while(num1 > 0)
+    {
+        rem = num1%8;
+        num1 = num1/8;
+        octal = rem*mul+octal;
+        mul = mul*10;
+    }
+    cout<<"The Octal form of given number is = "<<octal;
+
 }
