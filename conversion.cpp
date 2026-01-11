@@ -1,4 +1,5 @@
 //Decimal to Binary
+//while loop
 #include<iostream>
 using namespace std;
 int main()
@@ -24,6 +25,34 @@ int main()
     }
     cout<<"The binary form of given number is = "<<ans;
 }
+//for loop
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cout<<"Enter the number = ";
+    cin>>num;
+    int rem, ans = 0, mul = 1;
+
+    for(mul=1; num>0; mul*=10)
+    {
+          //remainder
+        rem = num%2;
+
+        //quotient
+        num = num/2;
+
+        //answer
+        ans = rem*mul+ans;
+
+        //multiplication
+        mul = mul*10;
+    }
+    cout<<"The binary form of given number is = "<<ans;
+}
+
+
 
 
 //Binary to Decimal
