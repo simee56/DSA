@@ -42,3 +42,26 @@ int main()
     cout<<"IS "<<b<<" a prime number ? "<<primeNumber(b)<<endl;
     cout<<"Factorial of "<<b<<" is = "<<factorial(b)<<endl;
 }
+
+
+
+//sum of two numbers
+#include<iostream>
+using namespace std;
+int sum(int a, int b)
+{
+    int c = a+b;
+    return c;
+}
+
+int main()
+{
+    int num1, num2;
+    cout<<"Enter the value of number1 = ";
+    cin>>num1;
+    cout<<"Enter the value of number2 = ";
+    cin>>num2;
+
+    int ans = sum(num1, num2);
+    cout<<ans;
+}
