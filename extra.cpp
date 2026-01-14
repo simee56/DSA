@@ -38,6 +38,33 @@ int main()
     cout<<"Enter values = ";
     cin>>a>>b>>c>>d;
 
-    int ans = isRecatangle(a,b,b,c);
+    int ans = isRecatangle(a,b,c,d);
+    cout<<ans;
+}
+
+
+
+//Bishop - total moves of a bishop
+#include<iostream>
+using namespace std;
+
+int TotalMoves(int x, int y)
+{
+    int count = 0 ;
+    count+= min(8-x, 8-y);
+    count+= min(8-x, y-1);
+    count+= min(x-1, 8-y);
+    count+= min(x-1, y-1);
+
+    return count;
+}
+
+int main()
+{
+    int A, B;
+    cout<<"Enter the positions of bishop = ";
+    cin>>A>>B;
+
+    int ans = TotalMoves(A,B);
     cout<<ans;
 }
