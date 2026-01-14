@@ -18,3 +18,26 @@ int main()
 }
 
 
+//isRecatangle
+#include<iostream>
+using namespace std;
+
+bool isRecatangle(int a, int b, int c, int d)
+{
+    if((a==b && b==c) || (a==c && b==d) || (a=d && b==c))
+    return 1;
+
+    else
+    return 0;
+}
+
+
+int main()
+{
+    int a, b, c, d;
+    cout<<"Enter values = ";
+    cin>>a>>b>>c>>d;
+
+    int ans = isRecatangle(a,b,b,c);
+    cout<<ans;
+}
