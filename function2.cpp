@@ -22,7 +22,6 @@ int main()
 
 //Armstrong number
 #include<iostream>
-#include<cmath>
 using namespace std;
 
 int CountDigit(int num)
