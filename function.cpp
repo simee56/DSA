@@ -65,3 +65,23 @@ int main()
     int ans = sum(num1, num2);
     cout<<ans;
 }
+
+//Swapping of numbers - pass by value and pass by reference
+#include<iostream>
+using namespace std;
+
+void Swap(int &m, int &n)
+{
+    int p;
+    p = m;
+    m=n;
+    n=p;
+};
+
+int main()
+{
+    int a, b;
+    cin>>a>>b;
+    Swap(a,b);
+    cout<<a<<b;
+}
