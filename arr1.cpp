@@ -43,3 +43,25 @@ int main()
     cout<<"The maximum element of array is "<<ans<<endl;
 
 }
+
+//sum of n elements of array
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr[10];
+    cout<<"Enter the elements of an array : ";
+    for(int i=0;i<10;i++)
+    {
+        cin>>arr[i];
+    }
+
+    int sum =0;
+
+    for(int i=0; i<10;i++)
+    {
+        sum =sum+arr[i];
+    }
+
+    cout<<sum;
+}
