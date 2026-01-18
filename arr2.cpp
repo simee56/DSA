@@ -89,3 +89,27 @@ int main()
         cout<<arr[i]<<" ";
     }
 }
+
+
+
+//second largest number
+#include<iostream>
+using namespace std;
+int main()
+{
+    int ans =0;
+    int arr[7] ={3,5,2,6,1,4,8};
+    for(int i =0; i<7; i++)
+    {
+        if(ans <arr[i])
+        ans = arr[i];
+    }
+
+    for(int i =0; i<7;i++)
+    {
+        if(ans != arr[i])
+        ans = max(ans, arr[i]);
+    }
+
+    cout<<ans;
+}
