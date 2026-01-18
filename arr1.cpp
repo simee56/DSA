@@ -65,3 +65,56 @@ int main()
 
     cout<<sum;
 }
+
+//foibonacci series
+#include<iostream>
+using namespace std;
+int main()
+{
+    //ask user the index at which he wants to find trhe number
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+
+    int arr[1000];
+    arr[0] = 0;
+    arr[1] =  1;
+
+    for(int i =2 ; i<n; i++)
+    {
+        arr[i] = arr[i-1] + arr[i-2];
+    }
+
+    cout<<arr[n-1];
+
+}
+
+
+
+//rotate an array by 1
+#include<iostream>
+using namespace std;
+int main()
+{
+    //ask user the index at which he wants to find trhe number
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+
+    int arr[1000];
+    cout<<"Enter the element spf an array : ";
+    for(int i=0; i<n; i++)
+    cin>>arr[i];
+
+    int temp = arr[n-1];
+
+    for(int i = n-2; i>=0; i--)
+    {
+        arr[i+1] = arr[i];
+    }
+
+    arr[0] = temp;
+
+    for(int i =0; i<n; i++)
+    cout<<arr[i]<<" ";
+}
