@@ -65,3 +65,5 @@ int main()
     int ans = isArmstrong(num, digits);
     cout<<ans;
 }
+
+
