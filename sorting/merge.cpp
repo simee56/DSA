@@ -21,7 +21,7 @@ void merge(int arr[], int start, int mid, int end)
             index++;
             right++;
         }
-            
+    }      
         //if elements are present in the left half
         while(left<=mid)
         {
@@ -45,7 +45,6 @@ void merge(int arr[], int start, int mid, int end)
             index++;
             start++;
         }
-    }
 }
 
 void MergeSort(int arr[], int start, int end)
