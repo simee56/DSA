@@ -40,3 +40,55 @@ int main()
     if(!found)
     cout<<"element "<<x<<" is not present at any index ";
 }
+
+
+
+//using funtion
+#include<iostream>
+using namespace std;
+
+void BinarySearch(int arr[], int n, int X)
+{
+    int start = 0, end = n-1, mid;
+
+    bool found = false;
+
+    while(start<=end)
+    {
+        mid = (start + end )/ 2;
+
+        if(arr[mid] == X)
+        {
+            cout<<"Element "<<X<<" is found at the index "<<mid<<endl;
+            found = true;
+            break;
+        }
+
+        else if(arr[mid] < X)
+        start = mid+1;
+
+        else
+        end = mid-1;
+    }
+
+    if(!found)
+    cout<<"element "<<X<<" is not present at any index ";
+};
+
+int main()
+{
+    int arr[1000];
+    int n;
+    cout<<"Enter the size of the array : ";
+    cin>>n;
+
+    cout<<"Enter the elements of the array : ";
+    for(int i = 0; i<n; i++)
+    cin>>arr[i];
+
+    int X;
+    cout<<"Enter the searching element = ";
+    cin>>X;
+
+    BinarySearch(arr, n, X);
+}
