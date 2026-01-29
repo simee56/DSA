@@ -113,3 +113,6 @@ int main()
 
     cout<<"target element occurs "<<CountOccurance(arr, n, X)<<" times";
 }
+
+
+
