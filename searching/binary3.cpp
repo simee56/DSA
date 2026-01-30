@@ -198,6 +198,27 @@ int main()
 #include<iostream>
 using namespace std;
 
+//if not sorted
+void BubbleSort(int arr[], int n)
+{
+    for(int i = n-2; i>=0; i--)
+    {
+        bool swapped = 0;
+
+        for(int j = 0; j<=i; j++)
+        {
+            if(arr[j] > arr[j+1])
+        {    
+            swap(arr[j], arr[j+1]);
+            swapped = 1;
+        }
+        }
+
+        if(swapped == 0)
+        break;
+    }
+};
+
 int MaxDistance(int arr[], int N, int M)
 {
     int start = 1, end = arr[N-1] - arr[0], mid, ans;
@@ -245,6 +266,7 @@ int main()
     cout<<"Enter the value of M(Cows) : ";
     cin>>M;
 
+    BubbleSort(arr, n);
     cout<<MaxDistance(arr, n, M);
 }
 
