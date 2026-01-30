@@ -198,7 +198,7 @@ int main()
 #include<iostream>
 using namespace std;
 
-int MinDistance(int arr[], int N, int M)
+int MaxDistance(int arr[], int N, int M)
 {
     int start = 1, end = arr[N-1] - arr[0], mid, ans;
 
@@ -245,6 +245,6 @@ int main()
     cout<<"Enter the value of M(Cows) : ";
     cin>>M;
 
-    cout<<MinDistance(arr, n, M);
+    cout<<MaxDistance(arr, n, M);
 }
 
