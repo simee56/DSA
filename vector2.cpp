@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-#include <algorithm>
+#include<algorithm>
 using namespace std;
 
 int main()
@@ -37,6 +37,14 @@ int main()
 
     //Find Index
     cout<<find(vec.begin(), vec.end(), 55) - vec.begin();
+    cout<<endl;
 
+    //count value
+    cout<<count(vec.begin(), vec.end(), 55);
+    cout<<endl;
+
+    //max element
+    cout << *max_element(vec.begin(), vec.end());
+    cout<<endl;
 
 }
