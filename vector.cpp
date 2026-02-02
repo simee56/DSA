@@ -28,6 +28,8 @@ int main()
     v2.pop_back();
     cout<<"Size of the vector2 is "<<v2.size()<<endl;
 
+    v2.erase(v2.begin()+2);
+    cout<<"Size of the vector2 is "<<v2.size()<<endl;
 
     //Initialize a vector
     vector<int>a(5,1);
