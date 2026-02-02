@@ -23,7 +23,7 @@ int main()
     // cout<<vec[i]<<" ";
 
     sort(vec.begin(), vec.end(), greater<int>());    //Decreasing order
-    
+    //or sort(vec.rbegin(), vec.rend()); 
     cout<<"Sorted Vector : ";
     for(int i =0; i<n; i++)
     cout<<vec[i]<<" ";
