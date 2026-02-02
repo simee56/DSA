@@ -28,4 +28,15 @@ int main()
     for(int i =0; i<n; i++)
     cout<<vec[i]<<" ";
 
+    cout<<endl;              
+
+
+    //Searching
+    cout<<binary_search(vec.begin(), vec.end(), 55);
+    cout<<endl;
+
+    //Find Index
+    cout<<find(vec.begin(), vec.end(), 55) - vec.begin();
+
+
 }
