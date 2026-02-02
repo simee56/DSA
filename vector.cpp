@@ -7,16 +7,27 @@ int main()
     //Create vector, declare
     vector<int>v;
     //Size and capacity
-    cout<<"Size of the vecotr is "<<v.size()<<endl;
-    cout<<"Capacity of the vecotr is "<<v.capacity()<<endl;
+    cout<<"Size of the vector is "<<v.size()<<endl;
+    cout<<"Capacity of the vector is "<<v.capacity()<<endl;
 
     //Insert elements
     v.push_back(2);
-    cout<<"Size of the vecotr is "<<v.size()<<endl;
-    cout<<"Capacity of the vecotr is "<<v.capacity()<<endl;
+    cout<<"Size of the vector is "<<v.size()<<endl;
+    cout<<"Capacity of the vector is "<<v.capacity()<<endl;
 
     //Update value
     v[0] = 1;
+
+    //Delete value
+    vector<int>v2;
+    v2.push_back(4);
+    v2.push_back(7);
+    v2.push_back(3);
+    v2.push_back(10);
+
+    v2.pop_back();
+    cout<<"Size of the vector2 is "<<v2.size()<<endl;
+
 
     //Initialize a vector
     vector<int>a(5,1);
