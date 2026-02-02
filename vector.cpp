@@ -52,4 +52,11 @@ int main()
     cout<<"ELements of vector v = ";
     for(int i =0; i<v.size(); i++)
     cout<<v[i]<<" ";
+    
+
+    //Remove all elemnts
+    v.clear();
+
+
+    
 }
