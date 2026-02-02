@@ -16,9 +16,16 @@ int main()
     cin>>vec[i];
 
     //Sorting
-    sort(vec.begin(), vec.end());  //increasing order
+    // sort(vec.begin(), vec.end());  //increasing order
 
+    // cout<<"Sorted Vector : ";
+    // for(int i =0; i<n; i++)
+    // cout<<vec[i]<<" ";
+
+    sort(vec.begin(), vec.end(), greater<int>());    //Decreasing order
+    
     cout<<"Sorted Vector : ";
     for(int i =0; i<n; i++)
     cout<<vec[i]<<" ";
+
 }
