@@ -17,4 +17,19 @@ int main()
 
     //Update value
     v[0] = 1;
+
+    //Initialize a vector
+    vector<int>a(5,1);
+
+    //print the elements of a vector  - Method1
+    cout<<"ELements of vector a = ";
+    for(auto it = a.begin(); it!= a.end(); it++)
+    cout<<*it<<" "<<endl;
+
+
+    //Method2
+
+    cout<<"ELements of vector v = ";
+    for(int i =0; i<v.size(); i++)
+    cout<<v[i]<<" ";
 }
