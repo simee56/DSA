@@ -13,7 +13,15 @@ int main()
     //Insert elements
     v.push_back(2);
     cout<<"Size of the vector is "<<v.size()<<endl;
-    cout<<"Capacity of the vector is "<<v.capacity()<<endl;
+    cout<<"Capacity of the vector is "<<v.capacity()<<endl;    
+    
+    //insert at any index
+    v.insert(v.begin()+1, 50);
+    cout<<"elements of vector V ";
+    for(int i =0; i<v.size(); i++)
+    cout<<v[i]<<" ";
+
+    cout<<endl;
 
     //Update value
     v[0] = 1;
@@ -27,7 +35,6 @@ int main()
 
     v2.pop_back();
     cout<<"Size of the vector2 is "<<v2.size()<<endl;
-
     v2.erase(v2.begin()+2);
     cout<<"Size of the vector2 is "<<v2.size()<<endl;
 
