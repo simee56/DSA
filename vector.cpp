@@ -58,5 +58,13 @@ int main()
     v.clear();
 
 
+    //Copy values form 1 vector to another
+    vector<int>x(6,2);
+    vector<int>y;
+
+    cout<<"Copying values ..."<<endl;
     
+    y = x;
+    for(int i =0; i<y.size(); i++)
+    cout<<y[i]<<" ";
 }
