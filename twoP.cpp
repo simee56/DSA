@@ -15,6 +15,8 @@ int main()
 
     int start = 0, end = n-1;
 
+    while(start < end)
+    {
     for(int i = 0; i<n; i++)
     {
         if(arr[start] == 0)
@@ -33,10 +35,12 @@ int main()
         }
 
     }
+    }
 
+    cout << "After segregating 0s and 1s: ";
     for(int i = 0; i<n; i++)
     {
-        cout<<arr[i];
+        cout<<arr[i]<<" ";
     }
 
 }
