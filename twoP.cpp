@@ -44,3 +44,41 @@ int main()
     }
 
 }
+
+
+
+//TWO SUM - Brute force
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter the size of an array : ";
+    cin>>n;
+
+    int arr[1000];
+    cout<<"Enter the elements of an array :";
+    for(int i =0; i<n; i++)
+    cin>>arr[i];
+
+    int target;
+    cout<<"Enter the target value = ";
+    cin>>target;
+
+    int num1, num2;
+
+    for(int i = 0; i<n-1; i++)
+    {
+        for(int j = i+1; j<n; j++)
+        {
+            if(arr[i] + arr[j] == target)
+        { 
+            num1 = arr[i];
+            num2 = arr[j];
+        }
+        }
+    }
+
+    cout<<"Those two values are :"<<num1<<" & "<<num2;
+}
