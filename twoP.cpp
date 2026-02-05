@@ -131,3 +131,68 @@ int main()
         }
     }
 }
+
+
+
+
+//Pair with given difference -  using two pointers
+#include<iostream>
+using namespace std;
+
+//sort the array - using insertion sort
+void insertionSort(int arr[], int n)
+{
+    for(int i =0; i<n; i++)
+    {
+        for(int j =i; j>0; j--)
+        {
+            if(arr[j] < arr[j-1])
+            swap(arr[j], arr[j-1]);
+        }
+    }
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the size of an array : ";
+    cin>>n;
+
+    int arr[1000];
+    cout<<"Enter the elements of an array :";
+    for(int i =0; i<n; i++)
+    cin>>arr[i];
+
+    int target;
+    cout<<"Enter the target value = ";
+    cin>>target;
+
+    insertionSort(arr, n);
+
+    cout<<"Sorted Array is :";
+    for(int i = 0; i< n; i++)
+    cout<<arr[i]<<" ";
+
+    cout<<endl;
+    
+    int num1, num2;
+
+    int start = 0, end = 1;
+
+    while(end < n)
+    {
+        if(arr[end] - arr[start] == target)
+        {
+            num1 = arr[start];
+            num2 = arr[end];
+            cout<<"Those two values are "<<num1<<" & "<<num2;
+            break;
+        }
+
+        else if( arr[end] - arr[start] < target)
+        end ++;
+
+        else
+        start++;
+    }
+}
