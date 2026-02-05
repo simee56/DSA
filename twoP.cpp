@@ -261,3 +261,33 @@ int main()
         end--;
     }
 }
+
+
+//Suffix sum
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter the size of an array : ";
+    cin>>n;
+
+    int arr[1000];
+    cout<<"Enter the elements of an array :";
+    for(int i =0; i<n; i++)
+    cin>>arr[i];
+
+    vector<int>sum(n);
+
+    sum[n-1] = arr[n-1];
+
+    for(int i = n-2; i>=0; i--)
+    {
+        sum[i] = sum[i+1] + arr[i];
+    }
+
+    for(int i =0 ; i<n ;i++)
+    cout<<sum[i]<<" ";
+}
