@@ -83,3 +83,43 @@ int main()
 
    Subarray(arr,n);
 }
+
+
+
+//Vector
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+bool canbedivided(vector<int>v)
+{
+    int prefix = 0, totalsum = 0, n = v.size();
+
+    for(int i = 0; i < n; i++)
+    totalsum += v[i];
+
+    for(int i = 0; i < n-1; i++)
+    {
+        prefix += v[i];
+        if(totalsum == 2*prefix)
+        return 1;
+    }
+
+    return 0;
+}
+
+
+int main()
+{
+    int n;
+    cout<<"Enter the size of an array : ";
+    cin>>n;
+
+    vector<int>v(n);
+    cout<<"Enter the elements of an array :";
+    for(int i =0; i<n; i++)
+    cin>>v[i];
+
+   cout<<canbedivided(v);
+}
