@@ -3,7 +3,7 @@
 #include<iostream>
 using namespace std;
 
-int Subarray(int arr[], int n)
+bool Subarray(int arr[], int n)
 {
     for(int i = 0; i<n-1; i++)
     {
@@ -56,8 +56,8 @@ void Subarray(int arr[], int n)
     bool found = false; 
     for(int i =0; i<n-1; i++)
     {
-        prefix += arr[i];
-        int restsum = totalsum - prefix;
+        prefix += arr[i];   //left subarray
+        int restsum = totalsum - prefix;   //Right subarray
         if(restsum == prefix)
         {
             cout<<"Array can be devided into two subarrays and the sum would be "<<restsum<<endl;
