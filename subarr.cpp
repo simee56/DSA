@@ -35,3 +35,51 @@ int main()
 
     cout<<"The array can be divided into subarrays with equal sum "<<Subarray(arr,n);
 }
+
+
+
+//using prefix sum
+#include<iostream>
+using namespace std;
+
+void Subarray(int arr[], int n)
+{
+    int totalsum = 0;
+    cout<<"Total sum of the array is : ";
+    for(int i = 0; i<n; i++)
+    totalsum += arr[i];
+
+    cout<<totalsum<<endl;
+
+
+    int prefix = 0;
+    bool found = false; 
+    for(int i =0; i<n-1; i++)
+    {
+        prefix += arr[i];
+        int restsum = totalsum - prefix;
+        if(restsum == prefix)
+        {
+            cout<<"Array can be devided into two subarrays and the sum would be "<<restsum<<endl;
+            found = true;
+            break;
+        }
+    }
+    if(!found)
+    cout<<"Array can not  be devided into two subarrays";
+}
+
+
+int main()
+{
+    int n;
+    cout<<"Enter the size of an array : ";
+    cin>>n;
+
+    int arr[1000];
+    cout<<"Enter the elements of an array :";
+    for(int i =0; i<n; i++)
+    cin>>arr[i];
+
+   Subarray(arr,n);
+}
