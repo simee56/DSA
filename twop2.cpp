@@ -51,57 +51,59 @@ int main()
 }
 
 
+
+
 //Three sum- Binary Search(time complexity (o(n^2(logn))))
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 
+bool BinarySearch(vector<int>& v, int start, int end, int value)
+{
+    while(start <= end)
+    {
+        int mid = start + (end - start) /2;
+
+        if(v[mid] == value)
+        return true; 
+
+        else if(v[mid] > value)
+        end = mid - 1;
+
+        else
+        start = mid +1;
+    }
+    return false;
+}
 
 void ThreeSum(vector<int>v, int target)
 {
     int n = v.size();
     bool found = false;
 
+    sort(v.begin(), v.end());         //if array is not sorted
+
     for(int i = 0; i < n-2; i++)
     {
         for(int j = i+1; j < n-1; j++)
         {
-            BinarySearch(v, target);
-            found = true;
-            break;
+            int value = target - (v[i] + v[j]) ;
+
+            if (BinarySearch(v, j + 1, n - 1, value))
+            {
+                cout << "Those numbers are "
+                     << v[i] << ", "
+                     << v[j] << " and "
+                     << value << endl;
+                found = true;
+                return;  
+            }
         }
-
-        if(!found)
-        cout<<"No such triplets found .";
     }
+    if(!found)
+    cout<<"No such triplets found .";
 }
-
-
-bool BinarySearch(vector<int>& v, int i, int j, int n, int target)
-{
-    int start = j+1, end = n-1, mid;
-
-    while(start <= end)
-    {
-        mid = start + (end - start) /2;
-
-        if(v[i] + v[j] + v[mid] == target)
-        {
-            cout << "Those numbers are " 
-                    << v[i] << ", " 
-                    << v[j] << " and " 
-                    << v[k] << endl;
-            return; 
-        }
-
-        else if(v[i] + v[j] + v[mid] > target)
-        end = mid - 1;
-
-        else
-        start = mid +1;
-    }
-}
-
 
 int main()
 {
