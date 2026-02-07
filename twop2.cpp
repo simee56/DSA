@@ -181,3 +181,79 @@ int main()
 
     fourSum(v, X);
 }
+
+
+
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+bool BinarySearch(vector<int>& v, int start, int end, int value)
+{
+    while(start <= end)
+    {
+        int mid = start + (end - start) /2;
+
+        if(v[mid] == value)
+        return true; 
+
+        else if(v[mid] > value)
+        end = mid - 1;
+
+        else
+        start = mid +1;
+    }
+    return false;
+}
+
+void fourSum(vector<int>v, int target)
+{
+    int n = v.size();
+    bool found = false;
+
+    sort(v.begin(), v.end());         //if array is not sorted
+
+    for(int i = 0; i < n-3; i++)
+    {
+        for(int j = i+1; j < n-2; j++)
+        {
+            for(int k = j+1; k < n-1; k++)
+            {
+                int value = target - (v[i] + v[j] + v[k]) ;
+
+                if (BinarySearch(v, k + 1, n - 1, value))
+                {
+                    cout << "Those numbers are "
+                         << v[i] << ", "
+                         << v[j] << ", "
+                         << v[k] << " and "
+                         << value << endl;
+                    found = true;
+                    return;  
+                }
+            }
+        }
+    }
+    if(!found)
+    cout<<"No such 4 numbers found .";
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the size : ";
+    cin>>n;
+
+    int X;
+    cout<<"Enter the target : ";
+    cin>>X;
+
+    vector<int>v(n);
+    cout<<"Enter the elemnts : ";
+    for(int i = 0; i < n; i++)
+    cin>>v[i];
+
+    fourSum(v, X);
+}
+
