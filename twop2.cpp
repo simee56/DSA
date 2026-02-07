@@ -135,6 +135,8 @@ void ThreeSum(vector<int>& v, int target)
     int n = v.size();
     bool found = false;
 
+    sort(v.begin(), v.end());         //if array is not sorted
+
     for(int i = 0; i< n-2; i++)
     {
         int start = i+1, end = n-1;
@@ -313,3 +315,70 @@ int main()
     fourSum(v, X);
 }
 
+
+
+//Four sum problem - using two pointer
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+void fourSum(vector<int>& v, int target)
+{
+    int n = v.size();
+    bool found = false;
+
+    sort(v.begin(), v.end());         //if array is not sorted
+
+    for(int i = 0; i<n-3; i++)
+    {
+        for(int j = i+1; j<n-2; j++)
+        {
+            int start = j+1, end = n-1;
+
+            while(start < end)
+            {
+                int value = v[i] + v[j] + v[start] + v[end];
+
+                if(value == target)
+                {
+                    cout<<"Those numbers are :"
+                        <<v[i]<<", "
+                        <<v[j]<<", "
+                        <<v[start]<<" and "
+                        <<v[end]<<endl;
+                    found = true;
+                    break;
+                }
+
+                else if(value > target)
+                end --;
+
+                else 
+                start ++;
+            }
+        }
+    }
+
+    if(!found)
+    cout<<"Those 4 numbers dont exist.";
+}
+
+
+int main()
+{
+    int n;
+    cout<<"Enter the size : ";
+    cin>>n;
+
+    int X;
+    cout<<"Enter the target : ";
+    cin>>X;
+
+    vector<int>v(n);
+    cout<<"Enter the elemnts : ";
+    for(int i = 0; i < n; i++)
+    cin>>v[i];
+
+    fourSum(v, X);
+}
