@@ -124,6 +124,62 @@ int main()
 }
 
 
+//Three sum - using two pointers
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+void ThreeSum(vector<int>& v, int target)
+{
+    int n = v.size();
+    bool found = false;
+
+    for(int i = 0; i< n-2; i++)
+    {
+        int start = i+1, end = n-1;
+
+        while(start < end)
+        {
+            if(v[i] + v[start] + v[end] == target)
+            {
+                cout << "Those numbers are "
+                     << v[i] << ", "
+                     << v[start] << " and "
+                     << v[end] << endl;
+                found = true;
+                return;  
+            }
+            else if(v[i] + v[start] + v[end] > target)
+            end--;
+
+            else
+            start ++;
+        }
+    }
+    if(!found)
+    cout<<"No such triplets found .";
+}
+    
+int main()
+{
+    int n;
+    cout<<"Enter the size : ";
+    cin>>n;
+
+    int X;
+    cout<<"Enter the target : ";
+    cin>>X;
+
+    vector<int>v(n);
+    cout<<"Enter the elemnts : ";
+    for(int i = 0; i < n; i++)
+    cin>>v[i];
+
+    ThreeSum(v, X);
+}
+
+
 
 
 //Four sum- brute force approach(time complexity (o(n^4)))
