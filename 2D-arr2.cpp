@@ -167,3 +167,41 @@ int main()
 
     cout<<"Sum of second diagonal "<<second<<endl;
 }
+
+
+
+//Reverse each row of matrix
+#include<iostream>
+using namespace std;
+int main()
+{
+    int row, col;
+
+    cout<<"Enter the value of row : ";
+    cin>>row;
+    cout<<"Enter the value of column : ";
+    cin>>col;
+
+    int arr[100][100];
+    cout<<"Enter the elemnts in arr : ";
+    for(int i = 0; i < row; i++)
+    for(int j = 0; j < col; j++)
+    cin>>arr[i][j];
+
+    for(int i = 0; i< row; i++)
+    {
+        int start = 0, end = col-1;
+
+        while(start < end)
+        {
+            swap(arr[i][start], arr[i][end]);
+            start ++;
+            end --;
+        }
+    }
+
+    cout<<"Reversed Array : ";
+    for(int i = 0; i < row; i++)
+    for(int j = 0; j < col; j++)
+    cout<<arr[i][j]<<" ";
+}
