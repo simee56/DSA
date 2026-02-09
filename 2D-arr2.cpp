@@ -122,3 +122,48 @@ int main()
 
     cout<<"The row which have the maximum sum "<<sum<<" is :"<<index;
 }
+
+
+//Print sum of diagonal elements
+#include<iostream>
+using namespace std;
+int main()
+{
+    int row, col;
+
+    cout<<"Enter the value of row : ";
+    cin>>row;
+    cout<<"Enter the value of column : ";
+    cin>>col;
+
+    if(row != col)
+    {
+        cout<<"Please enter same values for row and col.";
+        return 0;
+    }
+ 
+    int arr[100][100];
+    cout<<"Enter the elemnts in arr : ";
+    for(int i = 0; i < row; i++)
+    for(int j = 0; j < col; j++)
+    cin>>arr[i][j];
+
+    int first = 0, second = 0;
+
+    //sum of fist diagonal elements
+    for(int i = 0; i < row; i++)
+    first += arr[i][i];
+
+    cout<<"Sum of firts diagonal "<<first<<endl;
+
+    //sum of fist diagonal elements
+    int i = 0, j = col-1;
+    while(j >= 0)
+    {
+        second += arr[i][j];
+        i++;
+        j--;
+    }
+
+    cout<<"Sum of second diagonal "<<second<<endl;
+}
