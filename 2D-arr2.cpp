@@ -83,3 +83,42 @@ int main()
     for(int j = 0; j < col; j++)
     cout<<sum[i][j]<<" ";
 }
+
+
+//Print row_index with maximum sum
+#include<iostream>
+#include<climits>
+using namespace std;
+int main()
+{
+    int row, col;
+
+    cout<<"Enter the value of row : ";
+    cin>>row;
+    cout<<"Enter the value of column : ";
+    cin>>col;
+
+    int arr[100][100];
+    cout<<"Enter the elemnts in arr : ";
+    for(int i = 0; i < row; i++)
+    for(int j = 0; j < col; j++)
+    cin>>arr[i][j];
+
+    int sum = INT_MIN, index = -1;
+
+    for(int i = 0; i < row; i++)
+    {
+        int total = 0;
+        for(int j = 0; j < col; j++)
+        {
+            total += arr[i][j];
+            if(sum < total)
+            {
+                sum = total;
+                index = i;
+            }
+        }
+    }
+
+    cout<<"The row which have the maximum sum "<<sum<<" is :"<<index;
+}
