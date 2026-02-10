@@ -20,5 +20,22 @@ int main()
     cout<<"Columns present in vec2 = "<<vec2[0].size()<<endl;
 
 
+    //Take input from user
+    int n, m;
+    cout<<"Enter the number of rows = ";
+    cin>>n;
+    cout<<"Enter the number of columns = ";
+    cin>>m;
+
+    vector<vector<int >>vec3(n, vector<int>(m));
+
+    cout<<"Enter the elements in vector : ";
+    for(int i = 0; i<n; i++)
+    for(int j = 0; j<m; j++)
+    cin>>vec3[i][j];
+
+    for(int i = 0; i<n; i++)
+    for(int j = 0; j<m; j++)
+    cout<<vec3[i][j]<<" ";
 
 }
