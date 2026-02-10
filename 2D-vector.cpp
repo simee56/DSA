@@ -15,4 +15,10 @@ int main()
     for(int j = 0; j<2; j++)
     cout<<vec2[i][j]<<" ";
 
+    //To find the values of rows and cols
+    cout<<"Rows present in vec2 = "<<vec2.size()<<endl;
+    cout<<"Columns present in vec2 = "<<vec2[0].size()<<endl;
+
+
+
 }
