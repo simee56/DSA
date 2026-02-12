@@ -38,7 +38,7 @@ int main()
 }
 
 
-//transpose of a matrix
+//transpose of a matrix - Diagonal ke upar wale
 #include<iostream>
 using namespace std;
 
@@ -55,6 +55,45 @@ void TransposeMatirx(int arr[][100], int row, int col)
     swap(arr[i][j], arr[j][i]);
 }
 
+int  main()
+{
+    int row, col;
+    cout<<"Enter the rows : ";
+    cin>>row;
+
+    cout<<"Enter the col : ";
+    cin>>col;
+
+    int arr[100][100];
+    cout<<"Enter the element in array : ";
+    for(int i = 0; i < row; i++)
+    for(int j = 0; j < col; j++)
+    cin>>arr[i][j];
+
+    TransposeMatirx(arr, row, col);
+
+    for(int i = 0; i < row; i++)
+    for(int j = 0; j < col; j++)
+    cout<<arr[i][j]<<" ";
+}
+
+
+//transpose of a matrix - Diagonal ke neehce wale
+#include<iostream>
+using namespace std;
+
+void TransposeMatirx(int arr[][100], int row, int col)
+{
+    if(row != col) 
+    {
+        cout << "Transpose using swap works only for square matrix.";
+        return;
+    }
+
+    for(int i = 0; i < row; i++)
+    for(int j = 0; j < i; j++)
+    swap(arr[i][j], arr[j][i]);
+}
 int  main()
 {
     int row, col;
