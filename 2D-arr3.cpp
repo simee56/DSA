@@ -157,7 +157,7 @@ int main()
 #include<iostream>
 using namespace std;
 
-void RotateMatrixby190(int arr[][100], int n)
+void RotateMatrixby180(int arr[][100], int n)
 {
     int ans[100][100];
 
@@ -184,5 +184,59 @@ int main()
     for(int j = 0; j < n; j++)
     cin>>arr[i][j];
 
-    RotateMatrixby190(arr, n);
+    RotateMatrixby180(arr, n);
+}
+
+
+
+//2nd method for 180 - two times transpose
+#include<iostream>
+using namespace std;
+
+void transpose(int arr[][100], int n)
+{
+    for(int i = 0; i < n; i++)
+    for(int j = i+1; j < n; j++)
+    swap(arr[i][j], arr[j][i]);
+}
+ 
+void reverse(int arr[][100], int n)
+{
+    for(int i = 0; i<n; i++)
+    {
+        int start = 0, end = n-1;
+        while(start < end)
+    {
+        swap(arr[i][start], arr[i][end]);
+        start++, end--;
+    }
+    }
+}
+
+void RotateMatrixby180(int arr[][100], int n)
+{
+    transpose(arr, n);
+    reverse(arr, n);
+
+    transpose(arr, n);
+    reverse(arr, n);
+
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cout<<arr[i][j]<<" ";
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the value of rows and cols : ";
+    cin>>n;
+
+    int arr[100][100];
+    cout<<"Enter the element in array : ";
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cin>>arr[i][j];
+
+    RotateMatrixby180(arr, n);
 }
