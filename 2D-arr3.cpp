@@ -18,7 +18,6 @@ void PrintInwaveForm(int matrix[][100], int rows, int col)
         }
     }
 }
-
 int main()
 {
     int row, col;
@@ -114,4 +113,41 @@ int  main()
     for(int i = 0; i < row; i++)
     for(int j = 0; j < col; j++)
     cout<<arr[i][j]<<" ";
+}
+
+
+//Rotate a matrix by 90
+#include<iostream>
+using namespace std;
+
+void RotateMatrix(int arr[][100], int n)
+{
+    int ans[100][100];
+    
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            ans[j][n-i-1] = arr[i][j];
+        }
+    }
+
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cout<<ans[i][j]<<" ";
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the value of rows and cols : ";
+    cin>>n;
+
+    int arr[100][100];
+    cout<<"Enter the element in array : ";
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cin>>arr[i][j];
+
+    RotateMatrix(arr, n);
 }
