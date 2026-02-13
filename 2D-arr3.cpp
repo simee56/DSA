@@ -120,10 +120,10 @@ int  main()
 #include<iostream>
 using namespace std;
 
-void RotateMatrix(int arr[][100], int n)
+void RotateMatrixby90(int arr[][100], int n)
 {
     int ans[100][100];
-    
+
     for(int i = 0; i < n; i++)
     {
         for(int j = 0; j < n; j++)
@@ -149,5 +149,40 @@ int main()
     for(int j = 0; j < n; j++)
     cin>>arr[i][j];
 
-    RotateMatrix(arr, n);
+    RotateMatrixby90(arr, n);
+}
+
+
+//Rotate a matrix by 180
+#include<iostream>
+using namespace std;
+
+void RotateMatrixby190(int arr[][100], int n)
+{
+    int ans[100][100];
+
+    for(int i = 0; i<n; i++)
+    {
+        for(int j = 0; j<n; j++)
+        ans[n-1-i][n-1-j] = arr[i][j];
+    }
+
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cout<<ans[i][j]<<" ";
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the value of rows and cols : ";
+    cin>>n;
+
+    int arr[100][100];
+    cout<<"Enter the element in array : ";
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cin>>arr[i][j];
+
+    RotateMatrixby190(arr, n);
 }
