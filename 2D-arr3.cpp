@@ -240,3 +240,54 @@ int main()
 
     RotateMatrixby180(arr, n);
 }
+
+
+
+//3rd method - teo times revers only
+#include<iostream>
+using namespace std;
+
+void reverse(int arr[][100], int n)
+{
+    //Column-wise
+    for(int j = 0; j<n; j++)
+    {
+        int start = 0, end = n-1;
+        
+        while(start < end)
+        {
+            swap(arr[start][j], arr[end][j]);
+            start++, end--;
+        }
+    }
+
+    //Row-wise
+    for(int i = 0; i<n; i++)
+    {
+        int start = 0, end = n-1;
+        while(start < end)
+    {
+        swap(arr[i][start], arr[i][end]);
+        start++, end--;
+    }
+    }
+
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cout<<arr[i][j]<<" ";
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the value of rows and cols : ";
+    cin>>n;
+
+    int arr[100][100];
+    cout<<"Enter the element in array : ";
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cin>>arr[i][j];
+
+    reverse(arr, n);
+}
