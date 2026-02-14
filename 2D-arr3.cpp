@@ -243,7 +243,7 @@ int main()
 
 
 
-//3rd method - teo times revers only
+//3rd method - two times reveres only
 #include<iostream>
 using namespace std;
 
@@ -290,4 +290,65 @@ int main()
     cin>>arr[i][j];
 
     reverse(arr, n);
+}
+
+
+
+//Rotate a matrix k times
+#include<iostream>
+using namespace std;
+
+void Transpose(int arr[][100], int n)
+{
+    for(int i = 0; i < n; i++)
+    for(int j = i+1; j < n; j++)
+    swap(arr[i][j], arr[j][i]);
+}
+
+void Reverse(int arr[][100], int n)
+{
+    for(int i = 0; i < n; i++)
+    {
+        int start = 0, end = n-1;
+
+        while(start < end)
+        {
+            swap(arr[i][start], arr[i][end]);
+            start++, end--;
+        }
+    }
+}
+
+void Rotate(int arr[][100], int n)
+{
+    Transpose(arr, n);
+    Reverse(arr, n);
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the value of rows and cols : ";
+    cin>>n;
+
+    int k ;
+    cout<<"Enter the value of k : ";
+    cin>>k;
+
+    int arr[100][100];
+    cout<<"Enter the element in array : ";
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cin>>arr[i][j];
+
+    k = k % 4;
+    while(k)
+    {
+        Rotate(arr,n);
+        k--;
+    }
+
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cout<<arr[i][j]<<" ";
 }
