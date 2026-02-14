@@ -74,3 +74,65 @@ int main()
 
     SearchElement(arr, row, col, X);
 }
+
+
+//Search an element in 2D array - Binary search
+#include<iostream>
+using namespace std;
+
+void BinarySearch(int arr[][100], int row, int col, int X)
+{
+    bool found = false;
+
+    for(int i = 0; i < row; i++)
+    {
+        if(arr[i][0] <= X && X <= arr[i][col-1])
+        {
+            int start = 0, end = col-1;
+
+            while(start <= end)
+            {
+                int mid = start + (end - start) / 2;
+
+                if(arr[i][mid] == X)
+                {
+                    cout<<"Element "<<X<<" is found at index "<<i<<", "<<mid;
+                    found = true;
+                    break;
+                }
+
+                else if(arr[i][mid] < X)
+                start = mid + 1;
+
+                else
+                end = mid - 1;
+            }
+         }
+    }
+    if(!found)
+    cout<<"Element "<<X<<" is not found at any index ";
+}
+
+int main()
+{
+    int row, col;
+    cout<<"Enter the value of row : ";
+    cin>>row;
+
+    cout<<"Enter the value of column : ";
+    cin>>col;
+
+    int arr[100][100];
+
+    cout<<"Enter the elemnts in array : ";
+
+    for(int i = 0; i < row; i++)
+    for(int j = 0; j < col; j++)
+    cin>>arr[i][j];
+
+    int X;
+    cout<<"Enter the value to search : ";
+    cin>>X;
+
+    BinarySearch(arr, row, col, X);
+}
