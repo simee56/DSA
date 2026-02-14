@@ -136,3 +136,48 @@ int main()
 
     BinarySearch(arr, row, col, X);
 }
+
+
+//SEARCH IN ROW-COL SORTED MATRIX
+#include<iostream>
+using namespace std;
+
+int Searching(int arr[][100], int row, int col, int X)
+{
+    int i = 0, j = col-1;
+
+    while(i < row && j >=0)
+    {
+        if(arr[i][j] == X)
+        return 1;
+
+        else if(arr[i][j] < X)
+        i++;
+
+        else
+        j--;
+    }
+    
+    return 0;
+}
+
+int main()
+{
+    int row, col;
+    cout<<"Enter the vlaue of rows : ";
+    cin>>row;
+    cout<<"Enter the value of columns : ";
+    cin>>col;
+
+    int arr[100][100];
+    cout<<"Enter the elements : ";
+    for(int i = 0; i < row; i++)
+    for(int j = 0; j < col; j++)
+    cin>>arr[i][j];
+
+    int X;
+    cout<<"Enter the target element : ";
+    cin>>X;
+
+    cout<<Searching(arr, row, col , X);
+}
