@@ -352,3 +352,9 @@ int main()
     for(int j = 0; j < n; j++)
     cout<<arr[i][j]<<" ";
 }
+
+
+//lEFT Rotate a matrix k times
+#include<iostream>
+using namespace std;
+
