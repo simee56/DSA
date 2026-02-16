@@ -359,9 +359,9 @@ int main()
 using namespace std;
 
 
-void LeftRotate(int arr[][100], int N)
+void LeftRotate(int arr[][100], int N, int K)
 {
-    //Reverse
+    //Reverse     
     for(int i = 0; i < N; i++)
     {
         int start = 0, end = N-1;
@@ -388,7 +388,16 @@ int main()
     for(int j = 0; j < n; j++)
     cin>>arr[i][j];
 
-    LeftRotate(arr, n);
+    int k;
+    cout<<"Enter howmany times you wnat to rotate : ";
+    cin>>k;
+
+    k = k % n;
+    while(k)
+    {
+    LeftRotate(arr, n, k);
+    k--;
+    }
 
     cout<<"Rotated Matrix : ";
     for(int i = 0; i < n; i++)
