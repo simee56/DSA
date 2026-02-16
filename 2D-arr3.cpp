@@ -358,3 +358,41 @@ int main()
 #include<iostream>
 using namespace std;
 
+
+void LeftRotate(int arr[][100], int N)
+{
+    //Reverse
+    for(int i = 0; i < N; i++)
+    {
+        int start = 0, end = N-1;
+
+        while(start < end)
+        {
+            swap(arr[i][start], arr[i][end]);
+            end--;
+        }
+    }
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the value of rows and cols : ";
+    cin>>n;
+
+    int arr[100][100];
+
+    cout<<"Enter elements in array : ";
+
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cin>>arr[i][j];
+
+    LeftRotate(arr, n);
+
+    cout<<"Rotated Matrix : ";
+    for(int i = 0; i < n; i++)
+    for(int j = 0; j < n; j++)
+    cout<<arr[i][j]<<" ";
+}
+
