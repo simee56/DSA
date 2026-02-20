@@ -38,5 +38,30 @@ int main()
             break;
         }
     }
+}
+
+//Second mthod - sort and then find
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"Enter the size : ";
+    cin>>n;
+
+    vector<int>v(n);
+
+    cout<<"Enter elements : ";
+    for(int i = 0; i < n; i++)
+    cin>>v[i];
+
+    sort(v.begin(), v.end());
+
+    cout<<"Sorted elements : ";
+    for(int i = 0; i < n; i++)
+    cout<<v[i];
 
 }
