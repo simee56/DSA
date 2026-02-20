@@ -1,4 +1,4 @@
-//Find missing and repeateed number
+//Find missing and repeateed number - Time complexity = o(n) and spac complexity o(n)
 #include<iostream>
 using namespace std;
 
