@@ -122,3 +122,44 @@ int main()
 
     DecreaseElemnts(arr, n);
 }
+
+
+
+//find the occurance of a number
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void FindOccurance(vector<int>v, int N)
+{
+    //Decrease by 1
+    for(int i = 0; i < N; i++)
+    v[i]--;
+
+    //Find modulo and add N at the index
+    for(int i = 0; i < N; i++)
+    v[v[i] % N] += N;
+
+    //Find Occurance
+    for(int i = 0; i < N; i++)
+    {
+        cout<<"Occurance of "<<i+1<<" is "<< v[i] / N<<"\n";
+
+    }
+}
+
+
+int main()
+{
+   int n;
+    cout<<"enter the range :";
+    cin>>n;
+
+    vector<int>arr(n);
+
+    cout<<"Enter the elements : ";
+    for(int i = 0; i < n; i++)
+    cin>>arr[i];
+   
+    FindOccurance(arr, n);
+}
