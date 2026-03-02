@@ -1,4 +1,4 @@
-//Find missing and repeateed number - Time complexity = o(n) and spac complexity o(n)
+//Find missing and repeated number - Time complexity = o(n) and space complexity o(n)
 #include<iostream>
 using namespace std;
 
@@ -40,7 +40,9 @@ int main()
     }
 }
 
-//Second mthod - sort and then find
+
+
+//Second method - sort and then find
 #include<iostream>
 #include<vector>
 #include<algorithm>
@@ -64,4 +66,59 @@ int main()
     for(int i = 0; i < n; i++)
     cout<<v[i]<<" ";
 
+}
+
+
+
+
+
+//third method - space complexity - o(1) and tim complexity - o(n)
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void DecreaseElemnts(vector<int>v, int n)
+{
+    for(int i = 0; i < n; i++)
+    v[i]--;
+
+    //find modulo
+    for(int i = 0; i < n; i++)
+    v[v[i] % n] += n;
+
+    //find missing
+    for(int i = 0; i < n; i++)
+    {
+        if(v[i] / n == 0 )
+        {
+            cout<<"Missing number is : "<<i+1;
+            break;
+        }
+    }
+
+    //find repeated
+    for(int i = 0;  i < n; i++)
+    {
+        if(v[i] / n ==2)
+        {
+            cout<<"\nRepeated number is : "<<i+1;
+            break;
+        }
+    }
+}
+
+int main()
+{
+    int n;
+    cout<<"enter the range :";
+    cin>>n;
+
+    vector<int>arr(n);
+
+    cout<<"Enter the elements : ";
+    for(int i = 0; i < n; i++)
+    cin>>arr[i];
+
+    DecreaseElemnts(arr, n);
 }
