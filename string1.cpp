@@ -15,4 +15,12 @@ int main()
     cin.ignore();
     getline(cin,news);
     cout<<"The output is : "<<news;
+    
+    
+    //Escape character
+    string s2 = "Simee is a \"good\" girl\n";
+    cout<<s2;
+
+    string doubleEsc = "\\";
+    cout<<doubleEsc;
 }
