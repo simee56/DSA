@@ -60,4 +60,6 @@ int main()
         end--;
        
     }
+
+    cout<<"It is a Pallindrome.";
 }
