@@ -19,3 +19,20 @@ int main()
 
     cout<<name;
 }
+
+
+//Size of a String - withput using size method
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    string S;
+    cin>>S;
+    
+    int Size = 0;
+    while(S[Size] != '\0')
+    Size++;
+
+    cout<<Size;
+}
