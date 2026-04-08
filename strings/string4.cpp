@@ -74,3 +74,48 @@ int main()
     cin >>n;
     cout << intToRom(n);
 }
+
+
+//Factorial of a number - using a vector as a String which will store only songle digit as a characters
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+vector<int> Factorial(int n)
+{
+    vector<int> ans(1,1);
+
+    for(int i = 2; i <= n; i++)
+    {
+        int carry = 0;
+
+        for(int j = 0; j < ans.size(); j++)
+        {
+            int result = ans[j] * i + carry;
+            ans[j] = result % 10;
+            carry = result / 10;
+        }
+
+        while(carry)
+        {
+            ans.push_back(carry % 10);
+            carry /= 10;
+        }
+    }
+
+    reverse(ans.begin(), ans.end());
+    return ans;
+}
+
+int main()
+{
+    int n;
+    cout << "Enter the number: ";
+    cin >> n;
+
+    vector<int> res = Factorial(n);
+
+    for(int digit : res)
+        cout << digit;
+}
