@@ -4,7 +4,7 @@ using namespace std;
 
 int longestSubstring(string s)
 {
-    int maxLen = 0;
+    int maxLen = 0, n = s.size();
 
     for(int i = 0; i < n; i++)
     {
@@ -31,3 +31,11 @@ int longestSubstring(string s)
     return maxLen;
 }
 
+int main()
+{
+    string s;
+    cout<<"Enter the string: ";
+    cin>>s;
+
+    cout<<longestSubstring(s);
+}
