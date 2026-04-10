@@ -20,6 +20,14 @@ int longestSubstring(string s)
                     break;
                 }
             }
+
+            if(duplicate)
+            break;
+
+            maxLen = max(maxLen, j-i+1);
         }
     }
+
+    return maxLen;
 }
+
