@@ -49,13 +49,13 @@ using namespace std;
 
 int smallestSubString(string S)
 {
-    vector<bool>count(256,0);
-    int first = 0, second = 0, len = S.size(), uniqueChar;
+    vector<int>count(256,0);
+    int first = 0, second = 0, len = S.size(), uniqueChar = 0;
 
     //calculate the unique chars
     while(first < S.size())
     {
-        if(count[S[first]] = 0)
+        if(count[S[first]] == 0)
         uniqueChar++;
 
         count[S[first]]++;
@@ -80,7 +80,7 @@ int smallestSubString(string S)
         }
 
         len = min(len, second - first );
-
+ 
         //Unique cahr becomes 1
 
         while(uniqueChar != 1)
