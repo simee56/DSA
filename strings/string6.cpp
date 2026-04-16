@@ -41,3 +41,44 @@ int main()
 
     cout<<longestPefixSuffix(S);
 }
+
+
+
+#include<iostream>
+#include<vector>
+#include <algorithm>
+
+using namespace std;
+
+
+int stringMatching(string s1,string s2)
+{
+    int n = s1.size(), m = s2.size();
+    for(int i = 0 ; i <= n-m; i++)
+    {
+        int first = i, second = 0;
+        while(second < m)
+    {
+        if(s1[first] == s2[second])
+        {
+            first++, second++;
+        }
+        else
+        break;
+    }
+
+      if(second == m)
+        return first-second;
+
+    }
+       return -1;
+
+}
+
+
+int main()
+{
+    string s1, s2;
+    cin>>s1>>s2;
+    cout<<stringMatching(s1, s2);
+}
