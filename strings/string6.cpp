@@ -1,9 +1,8 @@
-//Longest Prefix and Suffix
+//Longest Prefix and Suffix -  Brute force method
 #include<iostream>
-#include <algorithm>
 using namespace std;
 
-int LPS(string s)
+int longestPefixSuffix(string s)
 {
     int n = s.size()-1,  len = 0;
     string prefix = "", suffix = "";
@@ -23,9 +22,8 @@ int main()
 {
     string S;
     cin>>S;
-    cout<<LPS(S);
+    cout<<longestPefixSuffix(S);
 }
-
 
 
 // KMP Algorithm - Longst prefix suffix
