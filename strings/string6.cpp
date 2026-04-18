@@ -1,3 +1,33 @@
+//Longest Prefix and Suffix
+#include<iostream>
+#include <algorithm>
+using namespace std;
+
+int LPS(string s)
+{
+    int n = s.size()-1,  len = 0;
+    string prefix = "", suffix = "";
+
+    for(int i = 0; i < n; i++)
+    {
+        prefix += s[i];
+        suffix = s[n - i] + suffix;
+
+        if(prefix == suffix)
+        len =  prefix.length();
+    }
+    return len;
+}
+
+int main()
+{
+    string S;
+    cin>>S;
+    cout<<LPS(S);
+}
+
+
+
 // KMP Algorithm - Longst prefix suffix
 #include<iostream>
 #include<vector>
@@ -41,6 +71,12 @@ int main()
 
     cout<<longestPefixSuffix(S);
 }
+
+
+
+
+
+
 
 
 
