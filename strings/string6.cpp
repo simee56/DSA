@@ -26,6 +26,9 @@ int main()
 }
 
 
+// To reduce the time complexity from O(n^2) to O(n) we have KMP Algorithm.
+
+
 // KMP Algorithm - Longst prefix suffix
 #include<iostream>
 #include<vector>
@@ -58,8 +61,6 @@ int longestPefixSuffix(string s)
 
     return LPS[s.size() - 1];
 }
-
-
 
 int main()
 {
