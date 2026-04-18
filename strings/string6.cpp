@@ -72,19 +72,10 @@ int main()
 }
 
 
-
-
-
-
-
-
-
+//String matching - Brute Force Approach
 #include<iostream>
 #include<vector>
-#include <algorithm>
-
 using namespace std;
-
 
 int stringMatching(string s1,string s2)
 {
@@ -107,10 +98,7 @@ int stringMatching(string s1,string s2)
 
     }
        return -1;
-
 }
-
-
 int main()
 {
     string s1, s2;
