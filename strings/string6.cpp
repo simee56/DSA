@@ -105,3 +105,57 @@ int main()
     cin>>s1>>s2;
     cout<<stringMatching(s1, s2);
 }
+
+
+
+//Making a string pallindrome - using LPS
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int minAddedChar(string str)
+{
+    //String Reverse
+    string rev = str;
+    reverse(rev.begin(), rev.end());
+    int size = str.size();
+    str += '$';
+    str += rev;
+
+    //LPS
+    int n = str.size();
+    vector<int>LPS(n, 0);
+    int pre = 0, suff = 1;
+
+    while(suff < str.size())
+    {
+        if(str[pre] == str[suff])
+        {
+            LPS[suff] = pre + 1;
+            pre++;
+            suff++;
+        }
+        else
+        {
+            if(pre == 0)
+            {
+                LPS[suff] = 0;
+                suff++;
+            }
+            else
+            pre = LPS[pre - 1];
+        }
+    }
+
+    return size - LPS[n-1];
+}
+
+int main()
+{
+    string S;
+    cout<<"Enter the String : ";
+    cin>>S;
+
+    cout<<minAddedChar(S);
+}
