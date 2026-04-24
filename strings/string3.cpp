@@ -124,3 +124,60 @@ int main()
     cout<<sort(s);
 
 }
+
+
+
+//Two place rotation- second logic
+#include<iostream>
+using namespace std;
+
+
+void clockRotated(string &s)
+{
+    int n = s.size();
+    char lastChar = s[n-1];
+    for(int i = n-1; i > 0; i--)
+    s[i] = s[i-1];
+
+    s[0] = lastChar;
+}
+
+void antiClockRotated(string &s)
+{
+    int n = s.size();
+    char first = s[0];
+    for(int i = 0; i<n-1; i++)
+    s[i] = s[i+1];
+
+    s[n-1] = first;
+}
+
+bool Two(string s1, string s2)
+{
+    if(s1.size() != s2.size())
+    return 0;
+
+    string clock = s1;
+    clockRotated(clock);
+    clockRotated(clock);
+
+    if(clock == s2)
+    return 1;
+
+    string anti = s1;
+    antiClockRotated(anti);
+    antiClockRotated(anti);
+
+    if(anti == s2)
+    return 1;
+
+    return 0;
+}
+
+int main()
+{
+    string s1, s2;
+    cout<<"Enter both strings : ";
+    cin>>s1>>s2;
+    cout<<Two(s1, s2);
+}
