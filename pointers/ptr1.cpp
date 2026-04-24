@@ -36,4 +36,11 @@ int main()
     //priting value of 2nd index
     cout<<"\nValue of 2nd index is : "<<*(arr+2);
 
+    //Printing all the value s and addresse
+    for(int i = 0; i<5; i++)
+    cout<<"\nAll values are : "<<*(arr+i);
+
+    for(int i= 0; i<5; i++)
+    cout<<"\nAll adresses are : "<<(arr+i);
+
 }
