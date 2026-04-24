@@ -3,20 +3,20 @@ using namespace std;
 
 int main()
 {
-    // int a = 10;
+    int a = 10;
     
-    // //Print the address of a
-    // cout<<"Address of a : "<<&a;
+    //Print the address of a
+    cout<<"Address of a : "<<&a;
 
-    // //Using pointer
-    // int *ptr = &a;
-    // cout<<"\nAddress of a using pointer : "<<ptr;
+    //Using pointer
+    int *ptr1 = &a;
+    cout<<"\nAddress of a using pointer : "<<ptr1;
 
-    // //Size of pointer
-    // cout<<"\nSize of ptr is : "<<sizeof(ptr);
+    //Size of pointer
+    cout<<"\nSize of ptr is : "<<sizeof(ptr1);
 
-    // //Accessing values using pointer
-    // cout<<"\nValue of a is : "<<*ptr;
+    //Accessing values using pointer
+    cout<<"\nValue of a is : "<<*ptr1;
 
 
 
@@ -27,8 +27,8 @@ int main()
     cout<<"\nAddress of 0th index : "<<arr;
     cout<<"\nAddress of 0th index : "<<arr+0;
     cout<<"\nAddress of 0th index using pointer : "<<&arr[0];
-    int *ptr = arr;
-    cout<<"\nAddress of 0th index : "<<ptr;
+    int *ptr2 = arr;
+    cout<<"\nAddress of 0th index : "<<ptr2;
 
     //first elemenet
     cout<<"\nAddress of firts index : "<<arr+1;
