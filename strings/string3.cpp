@@ -181,3 +181,37 @@ int main()
     cin>>s1>>s2;
     cout<<Two(s1, s2);
 }
+
+
+//check a Pangram
+#include<iostream>
+#include<vector>
+using namespace std;
+
+bool pangram(string s)
+{
+    vector<int>allChars(26, 0);
+    int i = 0;
+    while(i < s.size())
+    {
+        allChars[s[i] - 'a']++;
+        i++;
+    }
+
+    for(int i = 0 ; i<26; i++)
+    {
+        if(allChars[i] == 0)
+        return 0;
+    }
+
+    return 1;
+}
+
+int main()
+{
+    string sentence;
+    cout<<"Enter the sentence : ";
+    cin>>sentence;
+    cout<<pangram(sentence);
+    
+}
