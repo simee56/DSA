@@ -22,6 +22,7 @@ int main()
 
     //Pointers and arrays
     int arr[5] = {1,4,7,9,20};
+    int *ptr3 = arr;
 
     //printing the address of oth index -
     cout<<"\nAddress of 0th index : "<<arr;
@@ -42,5 +43,9 @@ int main()
 
     for(int i= 0; i<5; i++)
     cout<<"\nAll adresses are : "<<(arr+i);
+
+    //Adreesses using pointer
+    for(int i =0;i<5; i++)
+    cout<<"\nAddresses using pointers : "<<&ptr3[i];
 
 }
