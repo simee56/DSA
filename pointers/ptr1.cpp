@@ -22,13 +22,12 @@ int main()
 
     //Pointers and arrays
     int arr[5] = {1,4,7,9,20};
-    int *ptr3 = arr;
+    int *ptr2 = arr;
 
     //printing the address of oth index -
     cout<<"\nAddress of 0th index : "<<arr;
     cout<<"\nAddress of 0th index : "<<arr+0;
     cout<<"\nAddress of 0th index using pointer : "<<&arr[0];
-    int *ptr2 = arr;
     cout<<"\nAddress of 0th index : "<<ptr2;
 
     //first elemenet
@@ -37,7 +36,7 @@ int main()
     //priting value of 2nd index
     cout<<"\nValue of 2nd index is : "<<*(arr+2);
 
-    //Printing all the value s and addresse
+    //Printing all the values and addresses
     for(int i = 0; i<5; i++)
     cout<<"\nAll values are : "<<*(arr+i);
 
@@ -46,6 +45,19 @@ int main()
 
     //Adreesses using pointer
     for(int i =0;i<5; i++)
-    cout<<"\nAddresses using pointers : "<<&ptr3[i];
+    cout<<"\nAddresses using pointers : "<<&ptr2[i];
+
+
+    //Arithmetic operation
+    for(int i = 0; i<5; i++)
+    {
+        cout<<"\n"<<*ptr2;
+        ptr2++;
+    }
+    for(int i =4; i>=0;i--)
+    {
+        cout<<"\n"<<*ptr2;
+        ptr2--;
+    }
 
 }
