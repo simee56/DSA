@@ -215,3 +215,7 @@ int main()
     cout<<pangram(sentence);
     
 }
+
+
+
+
