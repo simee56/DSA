@@ -219,3 +219,49 @@ int main()
 
 
 
+//Add two strings
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    string s1, s2;
+    cin>>s1>>s2;
+    int i = s1.size()-1, j = s2.size() -1, carry = 0, sum= 0;
+    string result ="";
+
+    while(j >= 0 && i >=0)
+    {
+        sum = (s1[i] - '0') + (s2[j] - '0') +carry ;
+        carry = sum /10;
+        sum = sum%10 + '0';
+        result += sum ;
+        i--, j--;
+    }
+
+    while(i >=0)
+    {
+        sum =(s1[i] - '0') + carry ;
+        carry = sum /10;
+        sum = sum%10 + '0';
+        result += sum ;
+        i--;
+    }
+    
+    while(j >= 0)
+    {
+        sum = (s2[j] - '0') + carry;
+        carry = sum / 10;
+        sum = sum % 10 + '0';
+        result += sum;
+        j--;
+    }
+
+     if(carry)
+        result += '1';
+
+    reverse(result.begin(), result.end());
+    cout<<result;
+
+}
