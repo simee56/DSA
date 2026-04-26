@@ -60,4 +60,13 @@ int main()
         ptr2--;
     }
 
+
+
+    // char arr[5] = {'a', 'b', 'c', 'd', 'e'};
+    // char *ptr4 = &arr;
+    // cout<<ptr4;
+
+    char name = 'a';
+    cout<<"\n"<<&name;
+
 }
