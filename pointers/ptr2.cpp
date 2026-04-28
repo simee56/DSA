@@ -23,11 +23,11 @@ int main()
 
 
 
-
+//Double the value by 
 #include<iostream>
 using namespace std;
 
-void d(int *p)
+void d(int *p, int n)
 {
     for(int i = 0; i<n; i++)
     p[i]= p[i]*2;
@@ -37,9 +37,10 @@ int main()
 {
     int arr[5] = {1,2,3,4,5};
     d(arr, 5);
-    for(int i  =0; i<arr.size(); i++)
-    cout<<arr[i];
+    for(int i  =0; i<5; i++)
+    cout<<arr[i]<<" ";
 }
+
 
 //SWapping using pointers
 #include<iostream>
