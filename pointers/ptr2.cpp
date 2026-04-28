@@ -22,8 +22,7 @@ int main()
 }
 
 
-
-//Double the value by 
+//Double the value 
 #include<iostream>
 using namespace std;
 
@@ -60,6 +59,7 @@ int main()
     swapping(&a, &b);
     cout<<a<<" "<<b;
 }
+
 
 //SWapping using Reference variable
 #include<iostream>
