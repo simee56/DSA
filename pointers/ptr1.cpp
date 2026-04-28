@@ -66,4 +66,6 @@ int main()
     char *ptr3 = arr2;
     cout<<'\n'<<(void*)arr2;
     cout<<'\n'<<(void*)ptr3;
+    //using static cast
+    cout<<'\n'<<static_cast<void*>(arr2);
 }
