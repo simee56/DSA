@@ -20,3 +20,21 @@ int main()
     cout<<**p2;
 
 }
+
+
+#include<iostream>
+using namespace std;
+
+void fun(int **p)
+{
+    *p = *p +1;
+}
+
+int main()
+{
+    int n = 5;
+    int * p1 = &n;
+    int ** p2 = &p1;
+    fun(p2);
+    cout<<p1<<endl;
+}
