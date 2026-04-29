@@ -46,7 +46,7 @@ int main()
 #include<iostream>
 using namespace std;
 
-void fun(int &p)
+void fun(int* &p)
 {
     p = p +1;
 }
@@ -55,6 +55,6 @@ int main()
 {
     int n = 5;
     int *p1 = &n;
-    fun(*p1);
+    fun(p1);
     cout<<p1<<endl;
 }
