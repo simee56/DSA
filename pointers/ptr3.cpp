@@ -58,3 +58,25 @@ int main()
     fun(p1);
     cout<<p1<<endl;
 }
+
+
+//String copy
+#include<iostream>
+using namespace std;
+
+void copyString(char *str1, char *str2)
+{
+    while(*str1 = *str2)
+    {
+        str1++;
+        str2++;
+    }
+}
+
+int main()
+{
+    char first[] = "Simee";
+    char second[] = "Anshu";
+    copyString(first, second);
+    cout<<first;
+}
