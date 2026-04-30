@@ -13,7 +13,7 @@ int main()
     int **p2 = &p1;  //Stores the address of pointer P1
     cout<<p2<<endl;
 
-    *p1 = *p1 +10;  //Updating the value of n using p1
+    *p1 = *p1 +10;   //Updating the value of n using p1
     cout<<n<<endl;
 
     **p2 = **p2 + 1;   //Updating the value of n using p2
