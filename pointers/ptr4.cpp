@@ -36,4 +36,13 @@ int main()
         cout<<endl;
     }
    
+
+    //Release the mmeory from Heao
+
+    for(int i = 0; i<n; i++)
+    {
+        delete [] ptr[i]; //firstly release the memory of 1d array that contains values
+    }
+
+    delete [] ptr;  //This will release the memory of address array
 }
