@@ -41,6 +41,43 @@ int main()
 }
 
 
+//Longest substring without rpeating characters - using two pointers
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int substringUsingPointers(string s)
+{
+    vector<bool>Freq(256, 0);
+    int i = 0, j=0, len = 0;
+    while(j < s.size())
+    {
+        if(Freq[s[j]])
+        {
+            Freq[s[i]] = 0;
+            i++;
+        }
+        else
+        {
+            Freq[s[j]] = 1;
+            len = max(len, j-i+1);
+            j++;
+        }
+    }
+      return  len;
+
+}
+
+int main()
+{
+    string s;
+    cout<<"Enter the string: ";
+    cin>>s;
+
+    cout<<substringUsingPointers(s);
+}
+
+
 //Smallest distinct window
 #include<iostream>
 #include<vector>
