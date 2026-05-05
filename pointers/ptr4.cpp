@@ -1,4 +1,4 @@
-//2D arrays
+//2D arrays creation using pointers
 
 #include<iostream>
 using namespace std;
@@ -13,13 +13,13 @@ int main()
     cout<<"Enter the values pf columns : ";
     cin>>m;
 
-    int **ptr = new int*[n];
+    int **ptr = new int*[n];    //Array which contains adsresses
 
 
     //Final 2d array creation
-    for(int i = 0; i<n ;i++)
+    for(int i = 0; i<n ;i++)    //1D array consisting values
     {
-        ptr[i] = new int[m];
+        ptr[i] = new int[m];  
     }
 
     //Input values
@@ -37,7 +37,7 @@ int main()
     }
    
 
-    //Release the mmeory from Heao
+    //Release the mmeory from Heap
 
     for(int i = 0; i<n; i++)
     {
