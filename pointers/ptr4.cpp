@@ -90,4 +90,15 @@ int main()
             cout<<ptr[i][j][k]<<" ";
         }
     }
+
+
+    //Releasing memory
+    for(int i = 0; i<x; i++)
+    {
+        for(int j = 0; j<y; j++)
+        {
+            delete[] ptr[i][j];
+        }
+        delete[] ptr;
+    }
 }
