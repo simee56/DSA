@@ -24,3 +24,29 @@ int main()
 
     print(n);
 }
+
+
+//Print n to 1
+
+#include<iostream>
+using namespace std;
+
+void printNum(int n)
+{
+    if(n == 1)
+    {
+        cout<<n;
+        return;
+    }
+
+    cout<<n<<'\n';
+    printNum(n-1);
+}
+int main()
+{
+    int n;
+    cout<<"Enter number : ";
+    cin>>n;
+
+    printNum(n);
+}
