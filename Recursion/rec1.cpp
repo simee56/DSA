@@ -117,3 +117,34 @@ int main()
     }
 
 }
+
+
+//Table program for n
+
+#include<iostream>
+using namespace std;
+
+void printTable(int i, int n)
+{
+    if( i == 10)
+    {
+        cout<<n*10;
+        return;
+    }
+
+    cout<<i*n<<'\n';
+    i++;
+    printTable(i, n);
+  
+}
+
+int main()
+{   
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+
+    int i =1;
+
+    printTable(i, n);
+}
