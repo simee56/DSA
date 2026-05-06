@@ -50,3 +50,34 @@ int main()
 
     printNum(n);
 }
+
+//Print even number - input should be even
+#include<iostream>
+using namespace std;
+
+void printEven(int n)
+{
+    if(n == 2)
+    {
+        cout<<n;
+        return;
+    }
+
+    cout<<n<<'\n';
+    printEven(n-2);
+}
+int main()
+{
+    int n;
+    cout<<"Enter number : ";
+    cin>>n;
+
+    if(n%2 == 0)
+    printEven(n);
+
+    else
+    { 
+        n = n-1;
+        printEven(n);
+    }
+}
