@@ -1,8 +1,10 @@
+//Basic code for recursion
 #include<iostream>
 using namespace std;
 
 void print(int n)
 {
+    //Base Case
     if(n == 0)
     {
         cout<<"Happy Birthday!";
