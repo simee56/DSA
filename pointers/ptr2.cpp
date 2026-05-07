@@ -41,7 +41,7 @@ int main()
 }
 
 
-//SWapping using pointers
+//Swapping using pointers
 #include<iostream>
 using namespace std;
 
@@ -61,7 +61,7 @@ int main()
 }
 
 
-//SWapping using Reference variable
+//Swapping using Reference variable
 #include<iostream>
 using namespace std;
 
