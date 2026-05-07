@@ -13,7 +13,7 @@ int main()
     cout<<"Enter the values pf columns : ";
     cin>>m;
 
-    int **ptr = new int*[n];    //Array which contains adsresses
+    int **ptr = new int*[n];    //Array which contains addresses
 
 
     //Final 2d array creation
