@@ -145,3 +145,43 @@ int main()
     }
     cout<<"Sum of Cube of "<<num<<" number is : "<<sumOfCube(num);
 }
+
+
+
+//Check prime or not
+#include<iostream>
+using namespace std;
+
+void prime(int i, int n)
+{
+    // Base case
+    if(i == 1)
+    {
+        cout<<"It is a Prime number";
+        return;
+    }
+
+
+    if(n % i == 0)
+    {
+        cout<<"Not a Prime number";
+        return;
+    }
+  
+    prime(i-1, n);
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the value of n : ";
+    cin>>n;
+
+    if(n <= 1)
+    {
+        cout<<"Not a Prime number";
+        return 0;
+    }
+
+    prime(n-1, n);
+}
