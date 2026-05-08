@@ -19,5 +19,10 @@ int main()
     cout<<"Enter the number : ";
     cin>>n;
 
+    if( n < 0)
+    {
+        cout<<"Factorial of negative number isn't possible :(";
+        return 0;
+    }
     cout<<"Factorial of given number "<<n<<" is : "<<factorial(n);
 }
