@@ -5,7 +5,8 @@ int factorial(int n)
 {
     int fact;
 
-    if(n==1)
+    //Base Case
+    if(n==1 || n==0)
     return 1;
 
     return n * factorial(n-1);
