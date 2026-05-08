@@ -66,9 +66,6 @@ int powerOfTwo(int num, int n)
     if(n ==0)
     return 1;
 
-    if(n == 1 )
-    return num;
-
     return num * powerOfTwo(num, n-1);
 
 }
@@ -87,4 +84,34 @@ int main()
         return 0;
     }
     cout<<num<<" To the power "<<n<<" is : "<<powerOfTwo(num, n);
+}
+
+
+
+//Sum of square of n numbers
+#include<iostream>
+using namespace std;
+
+int sumOfSqaure(int num)
+{
+    //Base Case
+    if(num == 1)
+    return 1;
+
+    return num * num + sumOfSqaure(num-1);
+
+}
+
+int main()
+{
+    int num;
+    cout<<"Enter the num : ";
+    cin>>num;
+ 
+    if( num < 0)
+    {
+        cout<<"Square of negative number isn't possible :(";
+        return 0;
+    }
+    cout<<"Sum of Sqaure of "<<num<<" number is : "<<sumOfSqaure(num);
 }
