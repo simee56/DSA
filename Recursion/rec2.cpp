@@ -63,6 +63,9 @@ using namespace std;
 int powerOfTwo(int num, int n)
 {
     //Base Case
+    if(n ==0)
+    return 1;
+
     if(n == 1 )
     return num;
 
