@@ -56,30 +56,32 @@ int main()
 }
 
 
-//Power of 2
+//Power of any number
 #include<iostream>
 using namespace std;
 
-int powerOfTwo(int n)
+int powerOfTwo(int num, int n)
 {
     //Base Case
-    if(n==1 )
-    return 2;
+    if(n == 1 )
+    return num;
 
-    return 2 * powerOfTwo(n-1);
+    return num * powerOfTwo(num, n-1);
 
 }
 
 int main()
 {
-    int n;
-    cout<<"Enter the number : ";
+    int n, num;
+    cout<<"Enter the n(power) : ";
     cin>>n;
-
+    cout<<"Enter the num : ";
+    cin>>num;
+ 
     if( n < 0)
     {
         cout<<"Power of negative number isn't possible :(";
         return 0;
     }
-    cout<<"Power of given number "<<n<<" is : "<<powerOfTwo(n);
+    cout<<num<<" To the power "<<n<<" is : "<<powerOfTwo(num, n);
 }
