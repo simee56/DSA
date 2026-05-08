@@ -54,3 +54,32 @@ int main()
     }
     cout<<"Sum of given number "<<n<<" is : "<<sumOfNums(n);
 }
+
+
+//Power of 2
+#include<iostream>
+using namespace std;
+
+int powerOfTwo(int n)
+{
+    //Base Case
+    if(n==1 )
+    return 2;
+
+    return 2 * powerOfTwo(n-1);
+
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the number : ";
+    cin>>n;
+
+    if( n < 0)
+    {
+        cout<<"Power of negative number isn't possible :(";
+        return 0;
+    }
+    cout<<"Power of given number "<<n<<" is : "<<powerOfTwo(n);
+}
