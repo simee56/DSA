@@ -115,3 +115,33 @@ int main()
     }
     cout<<"Sum of Sqaure of "<<num<<" number is : "<<sumOfSqaure(num);
 }
+
+
+
+//Sum of cube of n numbers
+#include<iostream>
+using namespace std;
+
+int sumOfCube(int num)
+{
+    //Base Case
+    if(num == 1)
+    return 1;
+
+    return num * num * num + sumOfCube(num-1);
+
+}
+
+int main()
+{
+    int num;
+    cout<<"Enter the num : ";
+    cin>>num;
+ 
+    if( num < 0)
+    {
+        cout<<"Cube of negative number isn't possible :(";
+        return 0;
+    }
+    cout<<"Sum of Cube of "<<num<<" number is : "<<sumOfCube(num);
+}
