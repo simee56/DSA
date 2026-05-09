@@ -185,3 +185,27 @@ int main()
 
     prime(n-1, n);
 }
+
+
+//GCD of twoi numbers
+#include<iostream>
+using namespace std;
+
+int GCD(int a, int b)
+{
+    if(b == 0)
+    return a;
+
+    return GCD(b, a%b);
+}
+
+int main()
+{
+    int num1, num2;
+    cout<<"Enter number1 : ";
+    cin>>num1;
+    cout<<"Enter number2 : ";
+    cin>>num2;
+
+    cout<<GCD(num1, num2);
+}
