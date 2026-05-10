@@ -86,5 +86,37 @@ int main()
 }
 
 
+//Sum of all elements
+#include<iostream>
+using namespace std;
+
+void sumOfElements(int arr[], int n, int index, int sum)
+{
+    if(index == n)
+    {
+        cout<<"Sum of all elements is : "<<sum;
+        return;
+    }
+  
+
+    sum += arr[index];
+    sumOfElements(arr, n, index + 1, sum);
+}
+
+int main()
+{
+    int arr[100];
+    int n;
+    cout<<"Enter the size : ";
+    cin>>n;
+
+    for(int i = 0; i < n; i++)
+    cin>>arr[i];
+
+    int index = 0, sum = 0;
+
+    sumOfElements(arr, n, index, sum);
+}
+
 
 
