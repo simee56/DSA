@@ -77,3 +77,28 @@ int main()
     reverseString(str, start, end);
     cout<<str;
 }
+
+
+//Lower alphabet to Upper
+#include<iostream>
+using namespace std;
+
+void lowerToUpper(string &str, int index)
+{
+    if(index == -1)
+    return;
+
+    str[index] = 'A' + str[index] - 'a';
+    lowerToUpper(str, index-1);
+}
+
+int main()
+{
+    string str;
+    cin>>str;
+
+    int index = str.size() - 1;
+
+    lowerToUpper(str, index);
+    cout<<str;
+}
