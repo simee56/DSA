@@ -49,13 +49,14 @@ int main()
     }
 }
 
+
 //Print all the subets of a String
 #include<iostream>
 #include<algorithm>
 #include<vector>
 using namespace std;
 
-void subseq(vector<string>arr, int index, int n, vector<string>temp, vector<vector<string> >&ans)
+void subseq(string &s, int index, int n, string &temp, vector<string>&ans)
 {
 
     if(index == n)
@@ -65,37 +66,29 @@ void subseq(vector<string>arr, int index, int n, vector<string>temp, vector<vect
     }
 
     //Element isnt included in the set
-    subseq(arr, index+1, n, temp, ans);
+    subseq(s, index+1, n, temp, ans);
 
     //Element is included in the set
-    temp.push_back(arr[index]);
-    subseq(arr, index+1, n, temp, ans);
+    temp.push_back(s[index]);
+    subseq(s, index+1, n, temp, ans);
+    temp.pop_back();
 
 
 }
 
 int main()
 {
-    int n;
-    cout<<"Enter the value of n : ";
-    cin>>n; 
+    string s;
+    cout<<"Enter the elements of the String : ";
+    cin>>s;
 
-    vector<string>arr(n);
-    cout<<"Enter the elements of the array : ";
-    for(int i = 0; i<n ; i++)
-    cin>>arr[i];
+    string temp;
+    vector<string>ans;
 
-    vector<string>temp;
-    vector<vector<string> >ans;
-
-    subseq(arr, 0, n, temp, ans);
+    subseq(s, 0, s.size(), temp, ans);
 
     for(int i =0; i<ans.size(); i++)
     {
-        for(int j =0; j<ans[i].size(); j++)
-        {
-            cout<<ans[i][j]<<" ";
-        }
-        cout<<endl;
+        cout<<ans[i]<<"\n";
     }
 }
