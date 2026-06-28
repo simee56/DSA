@@ -16,7 +16,7 @@ int main()
 }
 
 
-// When class is private you have to define a function to access values from everywhere but make sure that the function muust be public
+// When class is private you have to define a function to access values from everywhere but make sure that the function must be public
 #include<iostream>
 using namespace std;
 
@@ -37,7 +37,7 @@ class Student2 {
     // Getter function
     void getValues()
     {
-        cout<<name<<age<<roll_number;
+        cout<<name<<" "<<age<<" "<<roll_number<<endl;
     }
 };
 
@@ -46,4 +46,7 @@ int main()
     Student2 s1;
     s1.setValues("Simee", 20, 235);
     s1.getValues();
+
+    // Size of an object
+    cout<<"Size of s1 object is "<<sizeof(s1);
 }
