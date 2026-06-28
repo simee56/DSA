@@ -47,6 +47,24 @@ int main()
     s1.setValues("Simee", 20, 235);
     s1.getValues();
 
-    // Size of an object
+    // Size of an object -> Padding
     cout<<"Size of s1 object is "<<sizeof(s1);
+}
+
+
+// Dynamic memory allocation
+#include<iostream>
+using namespace std;
+
+class Student3 {
+    public:
+    string name;
+    int age, roll_number;
+};
+
+int main()
+{
+    Student3 *s = new Student3;
+    (*s).name = "simee";
+    cout<<s->name;
 }
