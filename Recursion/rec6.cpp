@@ -92,3 +92,40 @@ int main()
         cout<<ans[i]<<"\n";
     }
 }
+
+
+//sum of subsets
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void printSum(vector<int>arr, int n, int index, int sum)
+{
+    if(index == n)
+    {
+        cout<<sum<<endl;
+        return;
+    }
+
+    //if the element is added for sum
+    printSum(arr, n, index++, sum+arr[index]);
+
+    //if the element isnt added for sum
+    printSum(arr, n, index++, sum);
+
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the value of n : ";
+    cin>>n; 
+
+    vector<int>arr(n);
+    cout<<"Enter the elements of the array : ";
+    for(int i = 0; i<n ; i++)
+    cin>>arr[i];
+
+    printSum(arr, n, 0, 0);
+
+}
