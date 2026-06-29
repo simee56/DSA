@@ -4,10 +4,11 @@
 using namespace std;
 
 class Customer {
-    public:
     string name;
     int age;
-    int balcance;
+    int balance;
+
+    public:
 
     // Default Consturctor
     Customer() {
@@ -18,13 +19,21 @@ class Customer {
     Customer(string a, int b, int c) {
         name = a;
         age = b;
-        balcance = c;
+        balance = c;
+    }
+
+    void displayValue() {
+        cout<<name<<"\n"<<age<<"\n"<<balance<<"\n";
     }
 };
 
 int main ()
 {
     Customer C1("Simee", 20, 100000);
-    cout<<C1.name<<"\n"<<C1.age<<"\n"<<C1.balcance<<"\n";
+    C1.displayValue();
+    Customer C2("Anshikaa", 20, 100000);
+    C2.displayValue();
+    Customer C3("Ujjwal", 20, 100000);
+    C3.displayValue();
 
 }
