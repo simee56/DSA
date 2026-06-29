@@ -49,10 +49,12 @@ int main()
 
     // Size of an object -> Padding
     cout<<"Size of s1 object is "<<sizeof(s1);
+    cout << sizeof(string) << endl;
+    cout << sizeof(int) << endl;
 }
 
 
-// Dynamic memory allocation
+// Dynamic memory allocation - Memory allocation in heap
 #include<iostream>
 using namespace std;
 
