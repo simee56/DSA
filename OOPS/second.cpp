@@ -105,7 +105,36 @@ int main ()
     C1.displayValue();
 
     Customerr C2(C1);     // -> Copy the value of C1 to C2
+    cout<<"This is the copy constructor";
     C2.displayValue();
 }
 
 
+
+
+
+// Destructor
+#include<iostream>
+using namespace std;
+
+class Car{
+    string name;
+    int prize;
+
+    public:
+    // constructor
+    Car() {
+        cout<<"This is a car\n";
+    }
+
+    // destructor
+    ~Car() {
+        cout<<"This sin not a car\n";
+    }
+};
+
+
+int main()
+{
+    Car C1;
+}
