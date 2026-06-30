@@ -48,7 +48,7 @@ class Customerr {
     int balance;
 
     public:
-    // Parameterized constructor
+    //   this pointer stores the address of that object which calls it
     Customerr(string name, int age, int balance) {
         this->name = name;
         this->age = age;
@@ -65,3 +65,47 @@ int main ()
     Customerr C1("Simee", 20, 100000);
     C1.displayValue();
 }
+
+
+// Copy constructor
+#include<iostream>
+using namespace std;
+
+class Customerr {
+    string name;
+    int age;
+    int balance;
+
+    public:
+
+    // Parameterized constructor
+    Customerr(string n, int a, int b)
+    {
+        name = n;
+        age = a;
+        balance = b;
+    }
+
+    // Copy constructor
+    Customerr(const Customerr &B)
+    {
+        name = B.name;
+        age = B.age;
+        balance = B.balance;
+    }
+
+    void displayValue() {
+        cout<<name<<"\n"<<age<<"\n"<<balance<<"\n";
+    }
+};
+
+int main ()
+{
+    Customerr C1("Simee", 20, 100000);
+    C1.displayValue();
+
+    Customerr C2(C1);     // -> Copy the value of C1 to C2
+    C2.displayValue();
+}
+
+
