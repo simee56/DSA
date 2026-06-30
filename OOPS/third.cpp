@@ -20,7 +20,8 @@ class Customer{
     void displayValue() {
         cout<<name<<" "
             <<acc_numer<<" "
-            <<balance<<endl;
+            <<balance<<" "
+            <<totalCustomer<<endl;
     }
 };
 
