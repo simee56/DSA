@@ -1,4 +1,4 @@
-// Static data member
+// Static data member and Static memeber function
 
 #include<iostream>
 using namespace std;
@@ -6,7 +6,7 @@ using namespace std;
 class Customer{
     string name;
     int acc_numer, balance;
-    static int totalCustomer; 
+    static int totalCustomer;   // Static data member
 
     public:
 
@@ -23,6 +23,10 @@ class Customer{
             <<balance<<" "
             <<totalCustomer<<endl;
     }
+
+    static void access_static_data() {        //Static member function
+        cout<<totalCustomer<<endl;
+    }
 };
 
 int Customer::totalCustomer = 0;    //Initialization of the static data member
@@ -33,4 +37,5 @@ int main()
     C1.displayValue();
     Customer C2("Anshu", 78, 0);
     C2.displayValue();
+    Customer::access_static_data();     //Static menmber function helps to access data using Class
 }
