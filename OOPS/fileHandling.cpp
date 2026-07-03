@@ -80,3 +80,36 @@ int main() {
     fout.close();
 
 }
+
+
+// Read nd Writre borh operations
+#include<iostream>
+#include<fstream>
+
+using namespace std;
+
+int main() {
+    ofstream fout;
+    fout.open("text.txt");
+
+    // Write data
+    fout<<"Bitch, I said what I said\n";
+    fout<<"I'd rather be famous instead\n";
+    fout<<"I let all that get to my head\n";
+    fout<<"I dont care, i paint the town red\n";
+
+    fout.close();
+
+    // Read data
+    ifstream fin;
+    fin.open("text.txt");
+
+    string line;
+
+    while(getline(fin, line)) {
+        cout<<line<<endl;
+    }
+
+    fin.close();
+
+}
