@@ -40,3 +40,43 @@ int main() {
     // Close the file
     fin.close();
 }
+
+
+// store data in a file
+#include<iostream>
+#include<vector>
+#include<algorithm>
+#include<fstream>
+
+using namespace std;
+
+int main() {
+    int n;
+    cout<<"Enter the value of n : ";
+    cin>>n;
+
+    vector<int>arr(n);
+    cout<<"Enter the elements : ";
+    for(int i = 0; i<n ; i++)
+    cin>>arr[i];
+
+    ofstream fout;
+    fout.open("data.txt");
+
+    fout<<"Original Data : \n";
+
+    for(int i = 0; i < n; i++) {
+        fout<<arr[i]<<" ";
+    }
+
+    sort(arr.begin(), arr.end());
+
+    fout<<"\nSorted Data \n";
+
+    for(int i = 0; i < n; i++) {
+        fout<<arr[i]<<" ";
+    }    
+
+    fout.close();
+
+}
