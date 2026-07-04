@@ -82,7 +82,7 @@ int main() {
 }
 
 
-// Read nd Writre borh operations
+// Read and write both operations
 #include<iostream>
 #include<fstream>
 
