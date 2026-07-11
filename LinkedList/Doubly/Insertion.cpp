@@ -1,4 +1,4 @@
-// Insertion of the node at the starting
+// Insertion of a node at the starting
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -17,7 +17,6 @@ class ListNode {
     }
 };
 
-//Creation of a doubly linked list
 int main()
 {   
     int n;
@@ -76,7 +75,6 @@ class ListNode {
     }
 };
 
-//Creation of a doubly linked list
 int main()
 {   
     int n;
@@ -120,5 +118,93 @@ int main()
     {
         cout << printNode->data << " ";
         printNode = printNode->next;
+    }
+}
+
+
+// Insertion of a node at a particular index - Using recursion
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Node 
+{
+    public :
+    int data;
+    Node* prev = NULL;
+    Node* next = NULL;
+
+    Node(int value)
+    {
+        data = value;
+        this->prev =  prev;
+        this->next =  next;
+    }
+};
+
+// Firstly create the list
+Node* CreateList(vector<int> &arr, int index, int size, Node* previous)
+{
+    if(index == size)
+    return NULL;
+
+    Node* newNode = new Node(arr[index]);
+    newNode->prev = previous;
+
+    newNode->next = CreateList(arr, index + 1, size, newNode);
+    return newNode;
+}
+
+// Insert the node
+Node* insertNode(Node* head, int k, int value)
+{
+    // Base case: insert here
+    if (k == 1)
+    {
+        Node* newNode = new Node(value);
+        newNode->next = head;
+        if (head != NULL)
+            head->prev = newNode;
+        return newNode;   // this becomes the new head of this sublist
+    }
+
+    // Recursive case: insert further down the list
+    head->next = insertNode(head->next, k - 1, value);
+    head->next->prev = head;   
+    return head;
+}
+
+int main()
+{   
+    int n;
+    cout << "Enter the value of n = ";
+    cin >> n;
+
+    if(n == 0)
+    {
+        cout << "The list is empty.";
+        return 0;
+    }
+
+    vector<int>arr(n);
+    cout << "Enter the elements of the array = ";
+    for (int i = 0; i < n; i++)
+        cin >> arr[i]; 
+    
+    int k, value;
+    cout << "Enter thepoition you want to insert the new node = ";
+    cin >> k;
+    cout<<"Enter the value you want to insert = ";
+    cin >> value;
+
+    Node* Head = CreateList(arr, 0, n, NULL);
+    Head = insertNode(Head, k, value);
+
+    // Print the elements of the list.
+    Node* printValues = Head;
+    while(printValues)
+    {
+        cout << printValues->data << " ";
+        printValues = printValues->next;
     }
 }
