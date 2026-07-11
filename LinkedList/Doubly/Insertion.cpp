@@ -159,7 +159,7 @@ Node* CreateList(vector<int> &arr, int index, int size, Node* previous)
 Node* insertNode(Node* head, int k, int value)
 {
     // Base case: insert here
-    if (k == 1)
+    if (k == 0)
     {
         Node* newNode = new Node(value);
         newNode->next = head;
@@ -189,11 +189,18 @@ int main()
     vector<int>arr(n);
     cout << "Enter the elements of the array = ";
     for (int i = 0; i < n; i++)
-        cin >> arr[i]; 
+    cin >> arr[i]; 
     
     int k, value;
     cout << "Enter the position you want to insert the new node = ";
     cin >> k;
+
+    if(k > n || k < 0)
+    {
+        cout << "Node can't be inserted at that position.";
+        return 0;
+    }
+
     cout<<"Enter the value you want to insert = ";
     cin >> value;
 
