@@ -192,7 +192,7 @@ int main()
         cin >> arr[i]; 
     
     int k, value;
-    cout << "Enter thepoition you want to insert the new node = ";
+    cout << "Enter the position you want to insert the new node = ";
     cin >> k;
     cout<<"Enter the value you want to insert = ";
     cin >> value;
