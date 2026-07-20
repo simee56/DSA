@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// Implemetatiion of Stack using array
+// Implementation of Stack using array
 class Stack 
 {
     int *arr;
@@ -62,12 +62,12 @@ class Stack
             return -1;
         }
         else {
-            cout << "the top most elment of the stack is : ";
+            cout << "The top most element of the stack is : ";
             return arr[Top];
         }
     }
 
-    // 4. To chec k if the Stack is empty
+    // 4. To check if the Stack is empty
     bool isEmpty()
     {
         return Top == -1;
@@ -111,7 +111,130 @@ int main()
     cout << peakValue << endl;
 
     cout << S.stackSize() << endl;
-    
-    cout << S.isEmpty() << endl;
 
+    cout << S.isEmpty() << endl;
+}
+
+
+
+// Implementation of Stack using LinkedList
+#include<iostream>
+using namespace std;
+
+class Node {
+    public :
+
+    int data;
+    Node *next;
+
+    Node(int val)
+    {
+        data = val;
+        next = NULL;
+    }
+};
+
+class stack {
+   Node *Top;
+   int size;
+
+    public :
+
+    stack()
+    {
+        Top = NULL;
+        size = 0;
+    }
+
+    // Stack operations
+    // 1. Push operation
+    void Push(int val)
+    {
+        Node* temp = new Node(val);
+
+        if(temp == NULL)
+        {
+            cout << "Stack Overflow.\n";
+            return;
+        }
+        else
+        {
+            temp->next = Top;
+            Top = temp;
+            size++;
+            cout << "Pushed " << Top->data << " into the stack.\n";
+        }
+    }
+
+    // 2. Pop Operation
+    void Pop()
+    {
+        if(Top == NULL)
+        {
+            cout << "Stack underflow" << endl;
+            return;
+        }
+        else {
+            Node* temp = Top;
+            cout << "Popped " << Top->data << " into the stack.\n";
+            Top = Top->next;
+            delete temp;
+            size--;
+        }
+    }
+
+    // 3. Peak elemmnt
+    int Peak()
+    {
+        if(Top == NULL)
+        {
+            cout << "Stack is empty" << endl;
+            return -1;
+        }
+        else {
+            cout << "The top most element of the stack is : ";
+            return Top->data;
+        }
+    }
+
+    // 4. To check if the Stack is empty
+    bool isEmpty()
+    {
+        return Top == NULL;
+    }
+
+    // 5. To check the size of the Stack
+    int stackSize()
+    {
+        cout << "The size of the stack is : ";
+        return size;
+    }
+
+};
+
+int main()
+{
+    stack S;
+
+    int n;
+    cout << "Enter number of elements : ";
+    cin >> n;
+
+    int val;
+    cout << "Enter the elements : ";
+    for(int i = 0; i < n; i++)
+    {
+        cin >> val;
+        S.Push(val);
+    }
+
+    cout << S.Peak() << endl; 
+    cout << S.stackSize() << endl;
+
+    S.Pop();
+
+    cout << S.Peak() << endl;
+    cout << S.stackSize() << endl;
+
+    cout << S.isEmpty() << endl;
 }
