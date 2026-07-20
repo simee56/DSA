@@ -311,7 +311,7 @@ Node* DeleteNode(Node* head, int k)
     // Base case: this is the node to delete
     if(k == 0)
     {
-        Node* newNext = head->next;
+        Node* newNext = head->next;-+--Zx
  
         if(newNext != NULL)
             newNext->prev = NULL;   
