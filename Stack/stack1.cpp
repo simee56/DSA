@@ -238,3 +238,32 @@ int main()
 
     cout << S.isEmpty() << endl;
 }
+
+
+// Iplementation of Stack using STL
+#include<iostream>
+#include<stack>
+using namespace std;
+
+int main()
+{
+    stack<int>S;
+
+    int n;
+    cout << "Enter the value of n : ";
+    cin >> n;
+
+    int value;
+    for(int i = 0; i < n; i++)
+    {
+        cin >> value;
+        S.push(value);
+    }
+    cout << "The top most element of the stack is " << S.top() << endl;
+    cout << "The size of the stack is " << S.size() << endl;
+
+    S.pop();
+    cout << "The top most element of the stack is " << S.top() << endl;
+    cout << "The size of the stack is " << S.size() << endl;
+
+}
