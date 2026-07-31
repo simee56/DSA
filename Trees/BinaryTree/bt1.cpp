@@ -1,3 +1,6 @@
+// Creation of binary tree
+
+// 1. Level order construction
 #include<iostream>
 #include<queue>
 using namespace std;
@@ -52,3 +55,6 @@ int main()
         }
     }
 }
+
+
+// 2. Pre-order construction
