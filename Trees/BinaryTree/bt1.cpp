@@ -85,7 +85,7 @@ Node *BinaryTree()
 
     Node *current = new Node(x);
 
-    // Create the lest child
+    // Create the left child
     cout << "Enter the left child of " << current->data <<" :";
     current->left = BinaryTree();
 
