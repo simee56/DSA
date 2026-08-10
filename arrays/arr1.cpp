@@ -96,7 +96,7 @@ int main()
 using namespace std;
 int main()
 {
-    //ask user the index at which he wants to find trhe number
+    //ask user the index at which he wants to find the number
     int n;
     cout<<"Enter the number : ";
     cin>>n;
