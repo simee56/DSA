@@ -19,7 +19,7 @@ int main()
 
     cout << endl;
 
-    // To store values in set in ascending order
+    // To store values in set in descending order
     set<int, greater<int>> s1;
 
     for(int i = 0; i < n; i++)
