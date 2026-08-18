@@ -1,5 +1,5 @@
 // Representation of a graph using Adjaceny List
-// Undirected Unweighted grapj
+// Undirected Unweighted graph
 
 #include<iostream>
 #include<vector>
