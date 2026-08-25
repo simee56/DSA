@@ -10,13 +10,15 @@ vector<int> Dijkstra(int V, vector<vector<pair<int,int>>> &adj, int src)
     vector<bool> Explored(V, false);
     vector<int> distance(V, INT_MAX);
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>>pq;
+
+    distance[src] = 0;
     pq.push({0, src});
 
     while(!pq.empty()) {
-        auto [w, u, v] = pq.front();
+        auto [w, u] = pq.top();
         pq.pop();
 
-        if(!Explored[u] == 1)
+        if(Explored[u] == 1)
             continue;
 
         Explored[u] = 1;
@@ -26,13 +28,12 @@ vector<int> Dijkstra(int V, vector<vector<pair<int,int>>> &adj, int src)
                 distance[node] != INT_MAX &&
                 distance[node] + weight < distance[neighbor]) {
                 distance[neighbor] = distance[node] + weight;
-                pq.push({distance[neighbor], neighbor})
+                pq.push({distance[neighbor], neighbor});
             }
         }
-
-        return distance;
-
     }
+    return distance;
+
 }
 
 int main()
